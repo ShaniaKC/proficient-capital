@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../styles/dashboard.css">
+</head>
+
+<body>
+
+    <main class="dashboard">
+      
+        <!-- Sidebar starts -->
+
+        <section class="sidebar-wrapper">
+            <div class="sidebar" id="sidebar">
+                <i class="bi bi-x-octagon pointer" id="close-menu"></i>
+                <img src="../assets/images/logo.png" alt="Proficient Capital logo" class="logo">
+                <nav>
+                    <a href="../pages/admin_dashboard.html" class="icon-link-group"><i class="bi bi-layout-text-window-reverse"></i><span>Dashboard</span></a>
+                    <a href="yahoo" class="icon-link-group"><i class="bi bi-file-earmark-person"></i><span>Profile</span></a>
+                    <a href="" class="icon-link-group"><i class="bi bi-search"></i><span>Search</span></a>
+                    <a href="" class="icon-link-group"><i class="bi bi-person-workspace"></i></i><span>Manage Users</span></a>
+                    <a href="" class="icon-link-group"><i class="bi bi-people"></i><span>Customers</span></a>
+                    <a href="" class="icon-link-group"><i class="bi bi-person-badge"></i><span>Manage Accounts</span></a>
+                    <a href="" class="icon-link-group"><i class="bi bi-cash-stack"></i><span>Manage Loans</span></a>
+                    <a href="" class="icon-link-group"><i class="bi bi-piggy-bank"></i><span>Manage Investments</span></a>
+                </nav>
+                <div id="signout"><span>Sign Out</span><button class="redBtn"><i class="bi bi-box-arrow-right"></i></button></div>
+            </div>
+        </section>
+
+        <!-- Sidebar ends -->
+
+        <section class="top-navigation-wrapper">
+            <div class="top-navigation">
+
+                 <!-- Navigation Starts-->
+                <div class="top-navigation-menu">
+                    <i class="bi bi-grid-fill pointer" id="open-menu"></i>
+                    <i class="bi bi-caret-down-square pointer" id="toggle-top-nav"></i>
+                </div>
+                  <!-- Navigation Ends-->
+
+                  <!-- Searchbar Starts-->
+
+                <div class="searchbar">
+                    <form action="">
+                        <button type="submit"><i class="bi bi-search"></i></button>
+                        <input type="search" name="" id="">
+                    </form>
+                </div>
+                <!-- Searchbar Ends-->
+               
+                <div class="profile-nav">
+                    <!-- Notification starts Here -->
+                        <div class="notification-wrapper">
+                            <i class="bi bi-bell" id="notification-btn"></i>
+                            <div class="dropdown" id="notification-dropdown">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    <!-- Notification Ends Here -->
+
+                    <!-- Message dropdown Starts Here -->
+                        <div class="message-dropdown-wrapper">
+                            <i class="bi bi-envelope" id="message-btn"></i>
+                            <div class="dropdown" id="message-dropdown">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    <!-- Message dropdown Ends Here -->
+                    
+                    <!-- Profile Dropdown Starts Here -->
+                 <div class="profile-dropdown-wrapper">
+                    <button id="profile-btn" class="whiteBtn shadow">Nweke Earnest</button>
+                    <div id="profile-dropdown" class="dropdown">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, porro? Perferendis totam numquam ex porro consectetur molestiae quasi, vel dolores officia impedit vero ipsa? Inventore ex nisi nobis adipisci possimus?
+                    </div>
+                 </div>
+
+                 <!-- Profile Dropdown Ends -->
+
+                </div>
+            </div>
+        </section>
+        <!-- The sections above can be detached and used as Header.php -->
+
+
+        <section></section>
+
+
+<!-- The sections Below can be detached and used as footer.php -->
+    </main>
+    <script src="../scripts/jquery.js"></script>
+    <script src="../scripts/dashboard.js"></script>
+</body>
+
+</html>

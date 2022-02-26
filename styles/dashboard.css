@@ -1,0 +1,285 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+:root {
+  --shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  --grey: #e8e8e8;
+  --pink: rgb(243, 160, 160);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+}
+
+/* Page Layout Starts */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: auto auto;
+  gap: 15px;
+  background-color: var(--grey);
+}
+
+.sidebar-wrapper {
+  grid-column: 1 / 8;
+  grid-row: 1 / span 3;
+  position: relative;
+  display: none;
+}
+
+.top-navigation-wrapper {
+  grid-column: 1 / span 10;
+  grid-row: 1/2;
+}
+@media screen and (min-width: 500px) {
+  .sidebar-wrapper {
+    grid-column: 1 / 6;
+  }
+}
+@media screen and (min-width: 768px) {
+  .sidebar-wrapper {
+    grid-column: 1 / 4;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sidebar-wrapper {
+    grid-column: 1 / 3;
+    display: block;
+  }
+  .top-navigation-wrapper {
+    grid-column: 3 / span 10;
+  }
+}
+
+/* Page Layout Ends */
+
+/* Responsive Menu Modals Starts */
+
+#close-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: x-large;
+}
+#open-menu {
+  cursor: pointer;
+  display: block;
+}
+
+/* Responsive Menu Modals Starts */
+
+/* Sidebar Styles Start */
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
+  height: 100vh;
+  width: inherit;
+  display: none;
+  grid-template-rows: 60px 70vh 60px;
+  padding-top: 1rem;
+  row-gap: 2rem;
+  place-content: center;
+  box-shadow: var(--shadow);
+  z-index: 99;
+}
+
+.sidebar .logo {
+  grid-row: 1 /2;
+}
+.sidebar nav {
+  grid-row: 2 / 3;
+  display: grid;
+  grid-auto-rows: 2.5rem;
+  row-gap: 0.3rem;
+}
+.icon-link-group a {
+  color: inherit;
+}
+.icon-link-group .bi {
+  font-size: larger;
+}
+.icon-link-group {
+  display: grid;
+  grid-template-columns: 30px auto;
+  border-radius: 15px;
+  column-gap: 0.1rem;
+  color: black;
+  align-items: center;
+  padding: 0.3rem 1rem;
+}
+.icon-link-group.active,
+.icon-link-group:active,
+.icon-link-group:hover {
+  background-color: red;
+  color: white;
+}
+.sidebar #signout {
+  grid-row: 3 /4;
+  text-align: right;
+  cursor: pointer;
+}
+.sidebar #signout span {
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .sidebar {
+    display: grid;
+  }
+  #close-menu {
+    display: none;
+  }
+}
+
+/* Sidebar Styles end */
+
+/* Top Navigation Starts */
+
+.top-navigation {
+  height: 10vh;
+  padding: 1rem;
+  transition: all 1s ease;
+  height: auto;
+  background-color: white;
+}
+.top-navigation > *:not(:first-of-type) {
+  margin-top: 1rem;
+}
+
+.top-navigation-menu {
+  display: flex;
+  justify-content: space-between;
+  font-size: x-large;
+}
+.top-navigation .searchbar,
+.profile-nav {
+  display: none;
+}
+.profile-nav {
+  grid-template-columns: 40px 40px auto;
+  gap: 1rem;
+  place-content: center start;
+}
+.profile-nav i {
+  cursor: pointer;
+  font-size: larger;
+}
+
+@media screen and (min-width: 1200px) {
+  .profile-nav,
+  .top-navigation {
+    display: grid;
+  }
+  .top-navigation {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 10vh;
+    margin: 0.2rem 1rem 0 0;
+    padding: 0;
+    background-color: inherit;
+  }
+  .top-navigation > *:not(:first-of-type) {
+    margin-top: 0;
+  }
+  .top-navigation-menu {
+    display: none;
+  }
+  .top-navigation .searchbar {
+    display: block;
+  }
+  .profile-nav {
+    place-content: start end;
+  }
+}
+/* Top navigation ends */
+
+/* Components Styles Start */
+
+button {
+  background-color: none;
+  outline: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.redBtn {
+  background-color: red;
+  color: white;
+}
+
+.whiteBtn {
+  background-color: white;
+  color: black;
+}
+
+.searchbar {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 30px;
+  height: 2.5rem;
+  place-content: center end;
+  box-shadow: var(--shadow);
+}
+.searchbar > form {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  column-gap: 0.5rem;
+}
+.searchbar button {
+  padding: 0;
+  margin: 0;
+  font-size: large;
+  background-color: transparent;
+  height: 100%;
+}
+.searchbar input {
+  height: 100%;
+  border: none;
+  border-left: 2px solid var(--grey);
+  padding: 0 0.2rem;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  /* width: 90vw; */
+  width: 350px;
+  top: calc(100% + 0.25rem);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  padding: 0.75rem;
+  z-index: 1;
+}
+
+/* Components Styles End */
+
+/* Forms Start  */
+input {
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
+/* Forms End */
+
+/* Shared classes */
+.shadow {
+  box-shadow: var(--shadow);
+}
+.pointer {
+  cursor: pointer;
+}
+.display-grid {
+  display: grid;
+}

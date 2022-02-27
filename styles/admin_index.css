@@ -8,7 +8,8 @@
   display: grid;
   grid-template-rows: auto auto;
   row-gap: 2rem;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
+  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 1200px) {
@@ -24,6 +25,7 @@
   gap: 1rem;
   grid-template-columns: 1fr;
   grid-template-rows: auto repeat(4, 10rem);
+  margin-top: 1rem;
 }
 .small-card-stack > h2 {
   grid-row: 1/2;
@@ -61,7 +63,7 @@
   padding: 1.5rem;
   text-align: left;
   border-radius: 50%;
-  place-self: start end;
+  place-self: start;
   display: grid;
   place-content: center;
 }
@@ -81,6 +83,9 @@
 
   .small-card-stack > h2 {
     grid-column: 1 / 3;
+  }
+  .small-card-icon {
+    place-self: start end;
   }
 }
 @media screen and (min-width: 820px) {

@@ -78,6 +78,7 @@ li:hover {
   }
   .top-navigation-wrapper {
     grid-column: 3 / span 10;
+    position: initial;
   }
   .main-content-wrapper {
     grid-column: 3 / span 10;
@@ -216,9 +217,10 @@ li:hover {
   .top-navigation {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
-    margin: 0.2rem 1rem 0 0;
+    margin: 1rem 1rem 0 0;
     padding: 0;
     background-color: inherit;
+    box-shadow: none;
   }
   .top-navigation > *:not(:first-of-type) {
     margin-top: 0;

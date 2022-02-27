@@ -178,6 +178,7 @@ li:hover {
   transition: all 0.2s ease;
   height: auto;
   background-color: white;
+  box-shadow: var(--shadow);
 }
 
 .top-navigation > *:not(:first-of-type) {

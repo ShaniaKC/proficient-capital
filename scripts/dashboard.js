@@ -27,7 +27,6 @@ dropdownFunc("#message-btn", "#message-dropdown")
 $('#toggle-top-nav').on('click', () => {
     $(".profile-nav").toggleClass('display-grid open');
     $(".top-navigation .searchbar").toggle();
-    $('.top-navigation').toggleClass('shadow')
 })
 
 // Change top nav background color on scroll

@@ -27,11 +27,7 @@ dropdownFunc("#message-btn", "#message-dropdown")
 $('#toggle-top-nav').on('click', () => {
     $(".profile-nav").toggleClass('display-grid open');
     $(".top-navigation .searchbar").toggle();
-    $('.top-navigation').toggleClass('shadow')
 })
-
-// Change top nav background color on scroll
-
 
 // Toggle Sidebar
 $('#open-menu, #close-menu').on('click', () => {
@@ -42,20 +38,4 @@ $('#open-menu, #close-menu').on('click', () => {
 
 // Show active menu item on sidebar
 $(`.icon-link-group[href="${window.location.href}"]`).addClass('active')
-
-// toggle tabs 
-
-const toggleTabs = (a,b) => {
-    $(a).on('click', () => {
-        $(a).parent().children().hasClass('active') && $(a).parent().children().removeClass('active');
-        $(a).toggleClass('active');
-        $(b).parent().children().css('display', 'block') &&$(b).parent().children().hide();
-        $(b).toggle();
-    })
-}
-
-toggleTabs('#lg-card-notification-link', '#lg-card-notification-content')
-toggleTabs('#lg-card-account-link', '#lg-card-account-content')
-toggleTabs('#lg-card-loan-link', '#lg-card-loan-content')
-
 })

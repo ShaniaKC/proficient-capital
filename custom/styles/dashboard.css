@@ -5,7 +5,6 @@
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   --grey: #e8e8e8;
   --pink: rgb(243, 160, 160);
-  --grey-text: #777;
 }
 
 * {
@@ -19,24 +18,13 @@ body {
 a {
   text-decoration: none;
 }
-ul {
-  list-style: none;
-}
-li {
-  padding: 0.5rem 0.2rem;
-  border: none;
-  border-top: 1px solid var(--grey);
-  color: var(--grey-text);
-}
-li:hover {
-  background-color: var(--grey);
-}
+
 /* Page Layout Starts */
 .dashboard {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: auto auto;
-  gap: 0.5rem 1rem;
+  gap: 15px;
   background-color: var(--grey);
 }
 
@@ -50,17 +38,7 @@ li:hover {
 .top-navigation-wrapper {
   grid-column: 1 / span 10;
   grid-row: 1/2;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 66;
 }
-.main-content-wrapper {
-  grid-column: 1 / span 10;
-  grid-row: 2/3;
-  min-height: 80vh;
-}
-
 @media screen and (min-width: 500px) {
   .sidebar-wrapper {
     grid-column: 1 / 6;
@@ -77,9 +55,6 @@ li:hover {
     display: block;
   }
   .top-navigation-wrapper {
-    grid-column: 3 / span 10;
-  }
-  .main-content-wrapper {
     grid-column: 3 / span 10;
   }
 }
@@ -173,13 +148,12 @@ li:hover {
 /* Top Navigation Starts */
 
 .top-navigation {
-  height: auto;
+  height: 10vh;
   padding: 1rem;
-  transition: all 0.2s ease;
+  transition: all 1s ease;
   height: auto;
   background-color: white;
 }
-
 .top-navigation > *:not(:first-of-type) {
   margin-top: 1rem;
 }
@@ -202,11 +176,7 @@ li:hover {
   cursor: pointer;
   font-size: larger;
 }
-.top-navigation.scrolled {
-  padding: 1rem;
-  margin: 0;
-  background-color: white;
-}
+
 @media screen and (min-width: 1200px) {
   .profile-nav,
   .top-navigation {
@@ -214,7 +184,7 @@ li:hover {
   }
   .top-navigation {
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto;
+    grid-template-rows: 10vh;
     margin: 0.2rem 1rem 0 0;
     padding: 0;
     background-color: inherit;
@@ -230,7 +200,6 @@ li:hover {
   }
   .profile-nav {
     place-content: start end;
-    height: fit-content;
   }
 }
 /* Top navigation ends */
@@ -298,7 +267,17 @@ button {
   font-size: large;
   margin-bottom: 0.75rem;
 }
-
+.dropdown ul {
+  list-style: none;
+}
+.dropdown li {
+  padding: 0.5rem 0.2rem;
+  border: none;
+  border-top: 1px solid var(--grey);
+}
+.dropdown li:hover {
+  background-color: var(--grey);
+}
 .
 /* Components Styles End */
 

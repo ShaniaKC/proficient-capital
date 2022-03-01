@@ -60,6 +60,10 @@ li:hover {
   grid-row: 2/3;
   min-height: 80vh;
 }
+.main-content {
+  margin: 0 0.5rem;
+  margin-bottom: 2rem;
+}
 
 @media screen and (min-width: 500px) {
   .sidebar-wrapper {
@@ -82,6 +86,9 @@ li:hover {
   }
   .main-content-wrapper {
     grid-column: 3 / span 10;
+  }
+  .main-content {
+    margin: 1rem 1rem 0 0;
   }
 }
 
@@ -247,6 +254,7 @@ button {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   cursor: pointer;
+  width: fit-content;
 }
 
 .redBtn {
@@ -259,6 +267,15 @@ button {
   color: black;
 }
 
+.icon-btn {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: grid;
+  place-content: center;
+  padding: 1rem;
+  border-radius: 50%;
+  font-size: large;
+}
 .searchbar {
   background-color: white;
   padding: 0.5rem;
@@ -271,6 +288,7 @@ button {
   display: grid;
   grid-template-columns: 1fr 9fr;
   column-gap: 0.5rem;
+  padding: 0;
 }
 .searchbar button {
   padding: 0;
@@ -301,8 +319,50 @@ button {
   font-size: large;
   margin-bottom: 0.75rem;
 }
+.small-card,
+.large-card {
+  position: relative;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+.small-card {
+  padding: 1rem;
+  padding-left: 1.5rem;
+}
+.large-card {
+  padding: 1rem;
+  padding-top: 2rem;
+}
+.large-card::before,
+.small-card::before {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  border-radius: 1rem;
+  background-color: red;
+}
 
-.
+.small-card::before {
+  height: 90%;
+  width: 1rem;
+  top: 4%;
+  left: 0;
+}
+
+.large-card::before {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  border-radius: 1rem;
+  background-color: red;
+}
+.large-card::before {
+  top: 0;
+  left: 0;
+  height: 1rem;
+  width: 100%;
+}
 /* Components Styles End */
 
 /* Forms Start  */
@@ -310,6 +370,27 @@ input {
   font-family: inherit;
   font-size: inherit;
   outline: none;
+  padding: 0.5rem 0.35rem;
+  border: 0.5px solid var(--grey);
+}
+form {
+  padding: 0.75rem;
+}
+fieldset {
+  border: none;
+  margin: none;
+  padding: none;
+}
+fieldset:disabled input {
+  border: none;
+  padding-left: 0;
+}
+form > .input-group {
+  margin-bottom: 0.5rem;
+}
+form > .input-group > label {
+  display: block;
+  margin-bottom: 0.5rem;
 }
 /* Forms End */
 

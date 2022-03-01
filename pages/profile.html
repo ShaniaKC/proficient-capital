@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="./styles/dashboard.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
 </head>
 
 <body>
@@ -18,10 +18,10 @@
         <section class="sidebar-wrapper">
             <div class="sidebar" id="sidebar">
                 <i class="bi bi-x-octagon pointer" id="close-menu"></i>
-                <img src="./assets/images/logo.png" alt="Proficient Capital logo" class="logo">
+                <img src="../assets/images/logo.png" alt="Proficient Capital logo" class="logo">
                 <nav>
-                    <a href="./index.html" class="icon-link-group active"><i class="bi bi-layout-text-window-reverse"></i><span>Dashboard</span></a>
-                    <a href="" class="icon-link-group"><i class="bi bi-file-earmark-person"></i><span>Profile</span></a>
+                    <a href="../index.html" class="icon-link-group "><i class="bi bi-layout-text-window-reverse"></i><span>Dashboard</span></a>
+                    <a href="" class="icon-link-group active"><i class="bi bi-file-earmark-person"></i><span>Profile</span></a>
                     <a href="" class="icon-link-group"><i class="bi bi-search"></i><span>Search</span></a>
                     <a href="" class="icon-link-group"><i class="bi bi-person-workspace"></i></i><span>Manage Users</span></a>
                     <a href="" class="icon-link-group"><i class="bi bi-people"></i><span>Customers</span></a>
@@ -111,13 +111,81 @@
         <!-- The sections above can be detached and used as Header.php -->
 
 
-        <section></section>
+        <section class="main-content-wrapper">
 
+            <div class="main-content large-card">
 
+                <section class="profile-intro">
+                    <div class="profile-image-btn-group">
+                        <img src="../assets/images/profile-photo.jpg" alt="">
+                        <button class="whiteBtn icon-btn" id="profile-pic-update-button"><i class="bi bi-pencil-fill"></i></button>
+                        <input type="file" name="" id="profile-pic-update-input" hidden>
+                    </div>
+                    <h2>Nweke Earnest</h2>
+                    <p>Staff</p>
+                </section> 
+
+                <section class="small-card profile-form">
+                    <h3>Profile info</h3>
+                    <button class="redBtn icon-btn update" id="profile-info-btn"><i class="bi bi-pencil-fill"></i></button>
+                    <form action="">
+                        <fieldset disabled="disabled" id="profile-info-fieldset">
+                            <div class="input-group">
+                                <label for="">Full Name</label>
+                                <input type="text" data-oldinfo="Nweke Earnest" name="" id="">
+                            </div>
+                            <div class="input-group">
+                                <label for="">Username</label>
+                                <input type="text" data-oldinfo="earnest10" name="" id="">
+                            </div>
+                            <div class="input-group">
+                                <label for="">Email</label>
+                                <input type="email" data-oldinfo="earnest10@mal.com" name="" id="">
+                            </div>
+                            <div class="input-group">
+                                <label for="">Phone Number</label>
+                                <input type="tel" data-oldinfo="08023232342" name="" id="">
+                            </div>
+                            <div class="input-group">
+                                <label for="">Position</label>
+                                <input type="text" data-oldinfo="Developer" name="" id="">
+                            </div>
+                            <div class="input-group">
+                                <label for="">Date Employed</label>
+                                <input type="date" data-oldinfo="12-12-12" name="" id="">
+                            </div>
+                            <button type="submit" class="redBtn" hidden>Submit</button>
+                        </fieldset>
+                    </form>
+                </section>
+                <section class="small-card profile-form">
+                    <h3>security form</h3>
+                    <button class="redBtn icon-btn update" id="security-form-btn"><i class="bi bi-pencil-fill"></i></button>
+                    <form action="">
+                        <fieldset disabled="disabled" id="security-form-fieldset">
+                            <div class="input-group">
+                                <label for="">Enter Password</label>
+                                <input type="password"  name="" id="" placeholder="*******">
+                            </div>
+                            <div class="input-group">
+                                <label for="">Confirm Password</label>
+                                <input type="password"  name="" id="" placeholder="*******">
+                            </div>
+                            <button type="submit" class="redBtn" hidden>Submit</button>
+                        </fieldset>
+                       
+                    </form>
+                </section>
+
+            </div>
+
+        </section>
+
+<link rel="stylesheet" href="../styles/profile.css">
 <!-- The sections Below can be detached and used as footer.php -->
     </main>
-    <script src="./scripts/jquery.js"></script>
-    <script src="./scripts/dashboard.js"></script>
+    <script src="../scripts/jquery.js"></script>
+    <script src="../scripts/dashboard.js"></script>
 </body>
 
 </html>

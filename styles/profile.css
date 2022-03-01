@@ -1,0 +1,53 @@
+.main-content > *:not(:first-of-type) {
+  margin: 2rem auto;
+}
+.profile-intro {
+  margin-top: 1rem auto 2rem;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.profile-image-btn-group {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 3px solid red;
+  position: relative;
+}
+.profile-image-btn-group .icon-btn {
+  border: 1px solid red;
+  position: absolute;
+  bottom: 5%;
+  right: 4%;
+}
+.profile-image-btn-group img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.profile-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2rem auto;
+}
+.profile-form .icon-btn {
+  place-self: center end;
+}
+.profile-form form {
+  grid-column: 1 / span 3;
+}
+.profile-form fieldset {
+  display: grid;
+  gap: 1rem;
+}
+.profile-form form input {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .profile-form fieldset {
+    grid-template-columns: 1fr 1fr;
+  }
+}

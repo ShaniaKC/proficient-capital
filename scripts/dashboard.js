@@ -57,4 +57,24 @@ toggleTabs('#lg-card-notification-link', '#lg-card-notification-content')
 toggleTabs('#lg-card-account-link', '#lg-card-account-content')
 toggleTabs('#lg-card-loan-link', '#lg-card-loan-content')
 
+// Start the profile forms with data gotten from the backend
+for (const elem in $('.input-group input')) {
+    $('.input-group input')[elem].value =  $('.input-group input')[elem]?.dataset?.oldinfo   
+}
+
+$("#profile-pic-update-button").on('click', () => {
+    $('#profile-pic-update-input').click()
 })
+
+const enableForm = (a,b) => {
+    $(a).on('click', () => { 
+        $(b).attr('disabled') == 'disabled' ? $(b).removeAttr('disabled') : $(b).attr('disabled', 'disabled');
+        $(`${b} button[hidden]`).toggle()
+    }) 
+}
+
+enableForm('#security-form-btn', '#security-form-fieldset');
+enableForm('#profile-info-btn','#profile-info-fieldset')
+})
+
+

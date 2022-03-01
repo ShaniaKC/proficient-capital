@@ -1,5 +1,6 @@
 .main-content > *:not(:first-of-type) {
   margin: 2rem auto;
+  max-width: 50rem;
 }
 .profile-intro {
   margin-top: 1rem auto 2rem;

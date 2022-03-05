@@ -1,6 +1,5 @@
 .main-content > *:not(:first-of-type) {
   margin: 2rem auto;
-  max-width: 50rem;
 }
 .profile-intro {
   margin-top: 1rem auto 2rem;
@@ -39,16 +38,7 @@
 .profile-form form {
   grid-column: 1 / span 3;
 }
-.profile-form fieldset {
-  display: grid;
-  gap: 1rem;
-}
+
 .profile-form form input {
   width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  .profile-form fieldset {
-    grid-template-columns: 1fr 1fr;
-  }
 }

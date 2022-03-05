@@ -58,7 +58,7 @@ toggleTabs('#lg-card-account-link', '#lg-card-account-content')
 toggleTabs('#lg-card-loan-link', '#lg-card-loan-content')
 
 // Start the profile forms with data gotten from the backend
-for (const elem in $('.input-group input')) {
+for (const elem in $('.data-info-form input')) {
     $('.input-group input')[elem].value =  $('.input-group input')[elem]?.dataset?.oldinfo   
 }
 
@@ -66,6 +66,7 @@ $("#profile-pic-update-button").on('click', () => {
     $('#profile-pic-update-input').click()
 })
 
+// Disable and enable info - form groups
 const enableForm = (a,b) => {
     $(a).on('click', () => { 
         $(b).attr('disabled') == 'disabled' ? $(b).removeAttr('disabled') : $(b).attr('disabled', 'disabled');
@@ -76,5 +77,20 @@ const enableForm = (a,b) => {
 enableForm('#security-form-btn', '#security-form-fieldset');
 enableForm('#profile-info-btn','#profile-info-fieldset')
 })
+
+// step form 
+$('.step-form-item:first-of-type').css('display', 'grid'); 
+
+const stepFormNav = (a) => {
+    $(a).on('click', (e) => {
+        e.preventDefault();
+        $(a).parent().parent().css('display', 'none'); 
+        a === '.prevBtn' ?  $(a).parent().parent().prev('.step-form-item').css('display', 'grid')
+        : a === '.nextBtn' ? $(a).parent().parent().next('.step-form-item').css('display', 'grid')
+        : console.log(a) ;
+    }) 
+}
+
+stepFormNav('.prevBtn'); stepFormNav('.nextBtn');
 
 

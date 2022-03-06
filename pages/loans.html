@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+    <div class="backdrop"></div>
     <main class="dashboard">
       
         <!-- Sidebar starts -->
@@ -112,11 +112,139 @@
 
 
         <section class="main-content-wrapper">
-            <div class="main-content large-card">
-
+            <div class="main-content">
+                <h1 class="text-center">Manage Loans</h1>
+                <section class="large-card grid-two with-header full-page">
+                    <h3>All Loans Table</h3>
+                    <button class="redBtn self-end" id="openLoanForm">Add New Loan</button>
+                   
+                   <!-- Datatables start -->
+                    <!-- <div class="datatable-dashv1-list custom-datatable-overright"> -->
+                     <div class="datatable">
+                        <div id="toolbar">
+                            <select class="form-control">
+                                <option value="">Export Basic</option>
+                                <option value="all">Export All</option>
+                                <option value="selected">Export Selected</option>
+                            </select>
+                        </div>
+                        <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                            <thead>
+                                <tr>
+                                    <th data-field="state" data-checkbox="true"></th>
+                                    <th data-field="id">S/N</th>
+                                    <th data-field="Account-Name">Account Name</th>
+                                    <th data-field="Account-Number">Account Number</th>
+                                    <th data-field="Loan-Amount">Loan Amount</th>
+                                    <th data-field="Loan-Tenor">Tenor</th>
+                                    <th data-field="Interest-rate">Interest Rate</th>
+                                    <th data-field="Status">Status</th>
+                                    <th data-field="Start-Date">Start Date</th>
+                                    <th data-field="End-Date">End Date</th>
+                                    <th data-field="action"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               
+                            </tbody>
+                        </table>
+                    </div>   
+                    <!-- Datatable end -->
+                </section>
             </div>
         </section>
 
+        <!-- All popups should be placed directly in dashboard main tag to enable vertical and horizontal centering -->
+          <!-- Add Loan Form -->
+          <section class="large-card popup" id="addLoanForm">
+            <div class="title-icon-form">
+                <h3><small>Add Loan</small></h3>
+                <button class="icon-btn redBtn" id="closeLoanForm"></button>
+                <form action="" class="grid-form-area">
+
+                    <div class="input-group">
+                        <label for="">Select Account Number</label>
+                        <select name="" id="">
+                            <option value=""></option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Loan Amount</label>
+                        <input type="number">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Date Started</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">End Date</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Loan Tenor</label>
+                        <input type="number">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Current Due</label>
+                        <input type="number">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Select Status</label>
+                       <select name="" id="">
+                           <option value=""></option>
+                       </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Interest Rate</label>
+                        <input type="number">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Cheque Number</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Guarantor's Name</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Guarantor's address</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Total Paid</label>
+                        <input type="number">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Accrued Interest</label>
+                        <input type="text" disabled>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Amount Payable</label>
+                        <input type="text" disabled>
+                    </div>
+
+                    <div class="input-group">
+                       <input type="file" name="" id="loan-form-guarantor-input" hidden>
+                       <button class="redBtn" id="loan-form-guarantor-button">Upload Guarantor's Signature</button>
+                    </div>
+                    <button type="submit" class="redBtn self-end">Add Loan</button>
+                </form>
+            </div>
+</section>
+<!-- Add Loan form ends -->
 
 <!-- The sections Below can be detached and used as footer.php -->
     </main>

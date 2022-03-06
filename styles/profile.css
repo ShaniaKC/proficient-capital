@@ -26,19 +26,3 @@
   height: 100%;
   border-radius: inherit;
 }
-
-.profile-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2rem auto;
-}
-.profile-form .icon-btn {
-  place-self: center end;
-}
-.profile-form form {
-  grid-column: 1 / span 3;
-}
-
-.profile-form form input {
-  width: 100%;
-}

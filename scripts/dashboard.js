@@ -62,9 +62,14 @@ for (const elem in $('.data-info-form input')) {
     $('.input-group input')[elem].value =  $('.input-group input')[elem]?.dataset?.oldinfo   
 }
 
-$("#profile-pic-update-button").on('click', () => {
-    $('#profile-pic-update-input').click()
-})
+const customFileBtn = (a,b) => {
+    $(a).on('click', (e) => {
+        e.preventDefault()
+    $(b).click()
+})}
+customFileBtn("#profile-pic-update-button", '#profile-pic-update-input')
+customFileBtn('#investor-form-next-of-kin-button', "#investor-form-next-of-kin-input")
+
 
 // Disable and enable info - form groups
 const enableForm = (a,b) => {
@@ -93,4 +98,15 @@ const stepFormNav = (a) => {
 
 stepFormNav('.prevBtn'); stepFormNav('.nextBtn');
 
+const popUpFunc = (a,b,c) => {
+    $(a).on('click', () => {
+        $(c).show(); $('.backdrop').show();
+        $(c).css('z-index' , $('.backdrop').css('z-index')+1);
+    })
+    $(b).on('click', () => {
+        $(c).hide(); $('.backdrop').hide()
+    })
+}
 
+popUpFunc('#openInvestorForm', '#closeInvestorForm', '#addInvestorForm');
+popUpFunc('#openLoanForm', '#closeLoanForm', '#addLoanForm');

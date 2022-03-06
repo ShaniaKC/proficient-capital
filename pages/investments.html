@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+    <div class="backdrop"></div>
     <main class="dashboard">
       
         <!-- Sidebar starts -->
@@ -114,12 +114,115 @@
         <section class="main-content-wrapper">
             <div class="main-content">
                 <h1 class="text-center">Investments</h1>
-                <section class="large-card full-page">
-
+                <section class="large-card grid-two with-header full-page">
+                    <h3>All Investors Table</h3>
+                    <button class="redBtn self-end" id="openInvestorForm">Add New Investor</button>
+                  
+                    <!-- Datatable starts here -->
+                    <!-- <div class="datatable-dashv1-list custom-datatable-overright"> -->
+                        <div class="datatable">
+                        <div id="toolbar">
+                            <select class="">
+                                <option value="">Export Basic</option>
+                                <option value="all">Export All</option>
+                                <option value="selected">Export Selected</option>
+                            </select>
+                        </div>
+                        <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                            <thead>
+                                <tr>
+                                    <th data-field="state" data-checkbox="true"></th>
+                                    <th data-field="id">S/N</th>
+                                    <th data-field="Account-Name">Account Name</th>
+                                    <th data-field="Account-Number">Account Number</th>
+                                    <th data-field="Investment-Amount">Investment Amount</th>
+                                    <th data-field="Investment-Tenor">Tenor</th>
+                                    <th data-field="Interest-rate">Interest Rate</th>
+                                    <th data-field="Status">Status</th>
+                                    <th data-field="Start-Date">Start Date</th>
+                                    <th data-field="End-Date">End Date</th>
+                                    <th data-field="action"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Datatable ends here -->                    
                 </section>
             </div>
         </section>
 
+        <!-- All popups should be placed directly in dashboard main tag to enable vertical and horizontal centering -->
+          <!-- Add Investor Form -->
+          <section class="large-card popup" id="addInvestorForm">
+                    <div class="title-icon-form">
+                        <h3><small>Investor's details - Proficient Capital Limited</small></h3>
+                        <button class="icon-btn redBtn" id="closeInvestorForm"></button>
+                        <form action="" class="grid-form-area">
+
+                            <div class="input-group">
+                                <label for="">Select Account Number:</label>
+                                <select name="" id="">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Investment Amount:</label>
+                                <input type="number">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Date Started:</label>
+                                <input type="date">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Date Ended:</label>
+                                <input type="date">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Investment Tenor:</label>
+                                <input type="number">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Interest rate:</label>
+                                <input type="number">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Select Status:</label>
+                               <select name="" id="">
+                                   <option value=""></option>
+                               </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Rollover:</label>
+                                <input type="text">
+                            </div>
+                            <div class="input-group">
+                                <label for="">Accrued Investment:</label>
+                                <input type="text" disabled="disabled">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Amount to payout:</label>
+                                <input type="text" disabled>
+                            </div>
+
+                            <div class="input-group">
+                                <button id="investor-form-next-of-kin-button">Next of Kin Signature</button>
+                                <input type="file" name="" id="investor-form-next-of-kin-input" hidden>
+                            </div>
+                            <button type="submit" class="redBtn self-end">Add Investor</button>
+                        </form>
+                    </div>
+        </section>
 
 <!-- The sections Below can be detached and used as footer.php -->
     </main>

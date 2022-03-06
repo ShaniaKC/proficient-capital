@@ -67,8 +67,9 @@ const customFileBtn = (a,b) => {
         e.preventDefault()
     $(b).click()
 })}
-customFileBtn("#profile-pic-update-button", '#profile-pic-update-input')
-customFileBtn('#investor-form-next-of-kin-button', "#investor-form-next-of-kin-input")
+customFileBtn("#profile-pic-update-button", '#profile-pic-update-input');
+customFileBtn('#investor-form-next-of-kin-button', "#investor-form-next-of-kin-input");
+customFileBtn('#loan-form-guarantor-button', '#loan-form-guarantor-input')
 
 
 // Disable and enable info - form groups
@@ -110,6 +111,7 @@ const popUpFunc = (a,b,c) => {
 
 popUpFunc('#openInvestorForm', '#closeInvestorForm', '#addInvestorForm');
 popUpFunc('#openLoanForm', '#closeLoanForm', '#addLoanForm');
+popUpFunc('#openUserForm', '#closeUserForm', '#addUserForm');
 
 
 $('.datatable').DataTable( {

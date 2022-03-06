@@ -430,6 +430,10 @@ input:disabled,
 select:disabled {
   background-color: var(--grey);
 }
+fieldset:disabled input,
+fieldset:disabled select {
+  background-color: white;
+}
 .input-group {
   width: 100%;
 }
@@ -554,6 +558,7 @@ form .input-group select {
   grid-row: 1 / span end;
   display: none;
   width: 90vw;
+  max-width: 900px;
   max-height: 90vh;
   overflow-y: auto;
 }

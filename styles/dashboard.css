@@ -281,9 +281,11 @@ h6 {
 /* DataTables Start */
 .datatable-wrapper {
   max-width: 90vw;
-  overflow-x: auto;
   grid-column: 1 / span end;
   margin-top: 2rem;
+}
+.datatable {
+  overflow-x: auto;
 }
 .datatable-wrapper #toolbar {
   margin-bottom: 1rem;

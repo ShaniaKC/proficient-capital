@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="../styles/dashboard.css">
 </head>
 
@@ -120,7 +121,7 @@
                   
                     <!-- Datatable starts here -->
                     <!-- <div class="datatable-dashv1-list custom-datatable-overright"> -->
-                        <div class="datatable">
+                        <div class="datatable-wrapper">
                         <div id="toolbar">
                             <select class="">
                                 <option value="">Export Basic</option>
@@ -128,7 +129,7 @@
                                 <option value="selected">Export Selected</option>
                             </select>
                         </div>
-                        <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                        <table class="datatable" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                             <thead>
                                 <tr>
                                     <th data-field="state" data-checkbox="true"></th>
@@ -159,7 +160,9 @@
           <section class="large-card popup" id="addInvestorForm">
                     <div class="title-icon-form">
                         <h3><small>Investor's details - Proficient Capital Limited</small></h3>
-                        <button class="icon-btn redBtn" id="closeInvestorForm"></button>
+                        <button class="icon-btn redBtn" id="closeInvestorForm">
+                            <i class="bi bi-x-octagon pointer"></i>
+                        </button>
                         <form action="" class="grid-form-area">
 
                             <div class="input-group">
@@ -224,10 +227,18 @@
                     </div>
         </section>
 
+       <style>
+          @media screen and (max-width: 390px) {
+            .title-icon-form {
+               grid-template-rows: 5rem auto;
+           }
+          }
+       </style>
 <!-- The sections Below can be detached and used as footer.php -->
     </main>
     <script src="../scripts/jquery.js"></script>
     <script src="../scripts/dashboard.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 </body>
 
 </html>

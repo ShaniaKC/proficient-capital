@@ -114,6 +114,34 @@
         <section class="main-content-wrapper">
             <div class="main-content large-card">
 
+                <!-- Data Table Start -->
+                <div class="datatable-wrapper">
+                    <div id="toolbar">
+                        <select class="form-control">
+                            <option value="">Export Basic</option>
+                            <option value="all">Export All</option>
+                            <option value="selected">Export Selected</option>
+                        </select>
+                    </div>
+                    <table class="datatable" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                        <thead>
+                            <tr>
+                                <!-- <th data-field="state" data-checkbox="true"></th> -->
+                                <th data-field="id">S/N</th>
+                                <th data-field="name">Sender Name</th>
+                                <th data-field="email">Email</th>
+                                <th data-field="date_added">Date added</th>
+                                <th data-field="status">Status </th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                        
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Data Table End -->
+                
             </div>
         </section>
 
@@ -122,6 +150,8 @@
     </main>
     <script src="../scripts/jquery.js"></script>
     <script src="../scripts/dashboard.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 </body>
 
 </html>

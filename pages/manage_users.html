@@ -114,9 +114,10 @@
         <section class="main-content-wrapper">
             <div class="main-content">
               <h1 class="text-center">Administrators</h1>
-                <div class="small-card">
+               
+             <!-- New user form starts here -->
+              <div class="small-card">
                     <h3>Add New User</h3>
-
                     <!-- Register new User Step 1 -->
                     <section class="step-form-container">
                         <form action="" class="grid-form-area step-form-item" id="NewUserStep1">
@@ -239,7 +240,38 @@
                         </form>
                     </section>
                 </div>
+                <!-- Add new user form ends -->
 
+                <!-- Datatable starts -->
+              <section class="large-card">
+                <h3>All Administrators</h3>
+                <div class="datatable-wrapper">
+                    <div id="toolbar">
+                        <select class="form-control">
+                            <option value="">Export Basic</option>
+                            <option value="all">Export All</option>
+                            <option value="selected">Export Selected</option>
+                        </select>
+                    </div>
+                    <table class="datatable" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                    <thead>
+                        <tr>
+                            <th data-field="state" data-checkbox="true"></th>
+                            <th data-field="id">S/N</th>
+                            <th data-field="fullname">Fullname</th>
+                            <th data-field="username">Username</th>
+                            <th data-field="email">Email</th>
+                            <th data-field="role">Role</th>
+                            <th data-field="action"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      
+                    </tbody>
+                </table>
+            </div>
+              </section>
+            <!-- Datatables end -->
             </div>
         </section>
 
@@ -247,12 +279,17 @@
     .grid-two {
          place-content: end start;
     }
+    .large-card {
+        margin-top: 2rem;
+    }
 </style>
 <!-- The sections Below can be detached and used as fo
     oter.php -->
     </main>
     <script src="../scripts/jquery.js"></script>
     <script src="../scripts/dashboard.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     
 
 </body>

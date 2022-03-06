@@ -81,7 +81,7 @@ const enableForm = (a,b) => {
 
 enableForm('#security-form-btn', '#security-form-fieldset');
 enableForm('#profile-info-btn','#profile-info-fieldset')
-})
+
 
 // step form 
 $('.step-form-item:first-of-type').css('display', 'grid'); 
@@ -110,3 +110,11 @@ const popUpFunc = (a,b,c) => {
 
 popUpFunc('#openInvestorForm', '#closeInvestorForm', '#addInvestorForm');
 popUpFunc('#openLoanForm', '#closeLoanForm', '#addLoanForm');
+
+
+$('.datatable').DataTable( {
+    
+} );
+
+
+})

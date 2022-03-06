@@ -88,7 +88,7 @@ enableForm('#profile-info-btn','#profile-info-fieldset')
 
 // step form  
 
-// Set the initial slider length for all step forms
+// Set the initial slider length for all step
 stepFormSliderCounter = 1
 const stepFormCount =  $('.step-form-container').children().length-1;
 $('.step-form-container .slider').css('width', `${(stepFormSliderCounter/stepFormCount) * 70}%`)

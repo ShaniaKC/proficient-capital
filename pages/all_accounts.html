@@ -25,7 +25,23 @@
                     <a href="./search.html" class="icon-link-group"><i class="bi bi-search"></i><span>Search</span></a>
                     <a href="./manage_users.html" class="icon-link-group"><i class="bi bi-person-workspace"></i></i><span>Manage Users</span></a>
                     <a href="./customers.html" class="icon-link-group"><i class="bi bi-people"></i><span>Customers</span></a>
-                    <a href="#" class="icon-link-group active"><i class="bi bi-person-badge"></i><span>Manage Accounts</span></a>
+                   
+                    <div class="icon-link-drop-wrapper">
+                        <div id="manage-account-btn"  class="icon-link-group">
+                            <i class="bi bi-person-badge"></i><span>Manage Accounts</span>
+                        </div>
+                        <div class="dropdown large-card" id="manage-account-dropdown">
+                            <ul>
+                                <a href="./new_accounts.html">
+                                    <li><i class="bi bi-person-badge"></i><span>New Accounts</span></li>
+                                </a>
+                                <a href="#">
+                                    <li><i class="bi bi-person-badge"></i><span>All Accounts</span></li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                   
                     <a href="./loans.html" class="icon-link-group"><i class="bi bi-cash-stack"></i><span>Manage Loans</span></a>
                     <a href="./investments.html" class="icon-link-group"><i class="bi bi-piggy-bank"></i><span>Manage Investments</span></a>
                 </nav>
@@ -112,8 +128,37 @@
 
 
         <section class="main-content-wrapper">
-            <div class="main-content large-card">
-
+            <div class="main-content large-card full-page">
+                <h3>All Accounts</h3>
+                <!-- Data Table Start -->
+                <div class="datatable-wrapper">
+                    <div id="toolbar">
+                        <select >
+                            <option value="">Export Basic</option>
+                            <option value="all">Export All</option>
+                            <option value="selected">Export Selected</option>
+                        </select>
+                    </div>
+                    <table class="datatable" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                        <thead>
+                            <tr>
+                                <th data-field="state" data-checkbox="true"></th>
+                                <th data-field="id">S/N</th>
+                                <th data-field="photo">Photo</th>
+                                <th data-field="accountName">Account Name</th>
+                                <th data-field="accountNo">Account Num.</th>
+                                <th data-field="email">Email</th>
+                                <th data-field="phone">Phone</th>
+                                <th data-field="gender">Gender</th>
+                                <th data-field="registerBy">Register By</th>
+                                <th data-field="registerOn">Registered on</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 

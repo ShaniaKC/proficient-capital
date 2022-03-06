@@ -19,9 +19,11 @@ const dropdownFunc = (a,b) => {
        $(b).toggle()
     })
 }
-dropdownFunc("#profile-btn", "#profile-dropdown")
-dropdownFunc("#notification-btn", "#notification-dropdown")
-dropdownFunc("#message-btn", "#message-dropdown")
+dropdownFunc("#profile-btn", "#profile-dropdown");
+dropdownFunc("#notification-btn", "#notification-dropdown");
+dropdownFunc("#message-btn", "#message-dropdown");
+dropdownFunc("#manage-account-btn", "#manage-account-dropdown")
+
 
 // Toggle top nav
 $('#toggle-top-nav').on('click', () => {
@@ -84,20 +86,39 @@ enableForm('#security-form-btn', '#security-form-fieldset');
 enableForm('#profile-info-btn','#profile-info-fieldset')
 
 
-// step form 
-$('.step-form-item:first-of-type').css('display', 'grid'); 
+// step form  
 
-const stepFormNav = (a) => {
-    $(a).on('click', (e) => {
+// Set the initial slider length for all step forms
+stepFormSliderCounter = 1
+const stepFormCount =  $('.step-form-container').children().length-1;
+$('.step-form-container .slider').css('width', `${(stepFormSliderCounter/stepFormCount) * 70}%`)
+
+function stepFormFunc (a) { 
+    $(a).on('click', function (e) {
+    e.preventDefault();
+
+    // Display the current step
+    if(a == '.prevBtn') {
+    $(this).parent().parent().css('display', 'none'); 
+    $(this).parent().parent().prev('.step-form-item').css('display', 'grid');
+stepFormSliderCounter--
+        }
+    else if(a == '.nextBtn'){
         e.preventDefault();
-        $(a).parent().parent().css('display', 'none'); 
-        a === '.prevBtn' ?  $(a).parent().parent().prev('.step-form-item').css('display', 'grid')
-        : a === '.nextBtn' ? $(a).parent().parent().next('.step-form-item').css('display', 'grid')
-        : console.log(a) ;
-    }) 
-}
+        $(this).parent().parent().css('display', 'none'); 
+        $(this).parent().parent().next('.step-form-item').css('display', 'grid');
+    stepFormSliderCounter++
+    }
+     
+     // change the slider width
+     console.log(stepFormSliderCounter)   
+$(this).parent().parent().siblings('.slider').css('width', `${(stepFormSliderCounter/stepFormCount) * 70}%` ) 
 
-stepFormNav('.prevBtn'); stepFormNav('.nextBtn');
+})
+
+}
+stepFormFunc('.nextBtn'); stepFormFunc('.prevBtn') ;
+
 
 const popUpFunc = (a,b,c) => {
     $(a).on('click', () => {
@@ -117,6 +138,4 @@ popUpFunc('#openUserForm', '#closeUserForm', '#addUserForm');
 $('.datatable').DataTable( {
     
 } );
-
-
 })

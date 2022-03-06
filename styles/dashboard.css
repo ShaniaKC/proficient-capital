@@ -26,6 +26,7 @@ body {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 ul {
   list-style: none;
@@ -154,19 +155,27 @@ h6 {
   grid-auto-rows: 2.5rem;
   row-gap: 0.3rem;
 }
-.icon-link-group a {
-  color: inherit;
+.icon-link-drop-wrapper {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
 }
-.icon-link-group .bi {
-  font-size: larger;
+.icon-link-drop-wrapper > .icon-link-group {
+  padding: 0.5rem 1rem;
 }
+.icon-link-drop-wrapper .dropdown {
+  top: 0;
+}
+.icon-link-drop-wrapper li,
 .icon-link-group {
   display: grid;
   grid-template-columns: 30px auto;
-  border-radius: 15px;
-  column-gap: 0.1rem;
-  color: black;
   align-items: center;
+  column-gap: 0.1rem;
+}
+.icon-link-group {
+  border-radius: 15px;
+  color: black;
   padding: 0.3rem 1rem;
 }
 .icon-link-group.active,
@@ -175,6 +184,12 @@ h6 {
 .icon-link-group:focus {
   background-color: red;
   color: white;
+}
+.icon-link-group a {
+  color: inherit;
+}
+.icon-link-group .bi {
+  font-size: larger;
 }
 .sidebar #signout {
   grid-row: 3 /4;
@@ -418,7 +433,8 @@ button {
 
 /* Forms Start  */
 input,
-select {
+select,
+textarea {
   font-family: inherit;
   font-size: inherit;
   outline: none;
@@ -434,7 +450,8 @@ fieldset:disabled input,
 fieldset:disabled select {
   background-color: white;
 }
-.input-group {
+.input-group,
+textarea {
   width: 100%;
 }
 form {
@@ -472,6 +489,27 @@ form .input-group select {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  padding-top: 2rem;
+  position: relative;
+}
+.step-form-container::before,
+.step-form-container .slider {
+  width: 70%;
+  height: 0.5rem;
+  border-radius: 2rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 15%;
+}
+.step-form-container::before {
+  content: "";
+  background-color: var(--grey);
+}
+.step-form-container .slider {
+  background-color: red;
+  width: 0;
+  transition-property: width;
+  transition-duration: 2s;
 }
 .step-form-item {
   grid-column: 1 / span 2;
@@ -479,7 +517,9 @@ form .input-group select {
   width: 100%;
   display: none;
 }
-
+.step-form-item:first-of-type {
+  display: grid;
+}
 .title-icon-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -521,6 +561,9 @@ form .input-group select {
 .grid-two.with-header {
   grid-template-rows: 1.5rem auto;
   place-content: start center;
+}
+.grid-two.end {
+  place-content: end start;
 }
 .text-center {
   text-align: center;

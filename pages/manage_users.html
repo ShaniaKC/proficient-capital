@@ -25,7 +25,23 @@
                     <a href="./search.html" class="icon-link-group"><i class="bi bi-search"></i><span>Search</span></a>
                     <a href="#" class="icon-link-group active"><i class="bi bi-person-workspace"></i></i><span>Manage Users</span></a>
                     <a href="./customers.html" class="icon-link-group"><i class="bi bi-people"></i><span>Customers</span></a>
-                    <a href="./manage_accounts.html" class="icon-link-group"><i class="bi bi-person-badge"></i><span>Manage Accounts</span></a>
+                   
+                    <div class="icon-link-drop-wrapper">
+                        <div id="manage-account-btn"  class="icon-link-group">
+                            <i class="bi bi-person-badge"></i><span>Manage Accounts</span>
+                        </div>
+                        <div class="dropdown large-card" id="manage-account-dropdown">
+                            <ul>
+                                <a href="./new_accounts.html">
+                                    <li><i class="bi bi-person-badge"></i><span>New Accounts</span></li>
+                                </a>
+                                <a href="./all_accounts.html">
+                                    <li><i class="bi bi-person-badge"></i><span>All Accounts</span></li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+
                     <a href="./loans.html" class="icon-link-group"><i class="bi bi-cash-stack"></i><span>Manage Loans</span></a>
                     <a href="./investments.html" class="icon-link-group"><i class="bi bi-piggy-bank"></i><span>Manage Investments</span></a>
                 </nav>
@@ -123,7 +139,7 @@
                    <!-- Datatable starts -->
                 <div class="datatable-wrapper">
                     <div id="toolbar">
-                        <select class="form-control">
+                        <select >
                             <option value="">Export Basic</option>
                             <option value="all">Export All</option>
                             <option value="selected">Export Selected</option>
@@ -163,7 +179,7 @@
             </div>
             <!-- Register new User Step 1 -->
             <section class="step-form-container">
-                <form action="" class="grid-form-area step-form-item" id="NewUserStep1">
+                <form action="" class="grid-form-area step-form-item" >
                     <div class="input-group">
                         <label for="">Fullname</label>
                         <input type="text" name="">
@@ -213,7 +229,7 @@
                 </form>
 
                 <!-- Regster new user step 2 -->
-                <form action="" class="grid-form-area step-form-item" id="NewUserStep2">
+                <form action="" class="grid-form-area step-form-item" >
 
                     <div class="input-group">
                         <label for="">Home Address</label>
@@ -276,7 +292,7 @@
                            <option value="level 4">Level 4</option>
                        </select>
                     </div>
-                   <div class="grid-two">
+                   <div class="grid-two end">
                     <button class="redBtn prevBtn">Prev</button>
                     <button class="redBtn self-end">Submit</button>
                    </div>
@@ -286,14 +302,7 @@
         <!-- Add new user form ends -->
 
 
-<style>
-    .grid-two {
-         place-content: end start;
-    }
-    .large-card {
-        margin-top: 2rem;
-    }
-</style>
+
 <!-- The sections Below can be detached and used as fo
     oter.php -->
     </main>

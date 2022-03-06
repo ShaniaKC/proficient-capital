@@ -21,18 +21,17 @@
                 <img src="../assets/images/logo.png" alt="Proficient Capital logo" class="logo">
                 <nav>
                     <a href="../index.html" class="icon-link-group "><i class="bi bi-layout-text-window-reverse"></i><span>Dashboard</span></a>
-                    <a href="#" class="icon-link-group active"><i class="bi bi-file-earmark-person"></i><span>Profile</span></a>
+                    <a href="./profile.html" class="icon-link-group"><i class="bi bi-file-earmark-person"></i><span>Profile</span></a>
                     <a href="./search.html" class="icon-link-group"><i class="bi bi-search"></i><span>Search</span></a>
                     <a href="./manage_users.html" class="icon-link-group"><i class="bi bi-person-workspace"></i></i><span>Manage Users</span></a>
                     <a href="./customers.html" class="icon-link-group"><i class="bi bi-people"></i><span>Customers</span></a>
-                    
                     <div class="icon-link-drop-wrapper">
                         <div id="manage-account-btn"  class="icon-link-group">
                             <i class="bi bi-person-badge"></i><span>Manage Accounts</span>
                         </div>
                         <div class="dropdown large-card" id="manage-account-dropdown">
                             <ul>
-                                <a href="./new_accounts.html">
+                                <a href="#">
                                     <li><i class="bi bi-person-badge"></i><span>New Accounts</span></li>
                                 </a>
                                 <a href="./all_accounts.html">
@@ -41,7 +40,6 @@
                             </ul>
                         </div>
                     </div>
-                    
                     <a href="./loans.html" class="icon-link-group"><i class="bi bi-cash-stack"></i><span>Manage Loans</span></a>
                     <a href="./investments.html" class="icon-link-group"><i class="bi bi-piggy-bank"></i><span>Manage Investments</span></a>
                 </nav>
@@ -128,76 +126,182 @@
 
 
         <section class="main-content-wrapper">
+            <div class="main-content">
 
-            <div class="main-content large-card">
+                <h1 class="text-center">Account</h1>
 
-                <section class="profile-intro">
-                    <div class="profile-image-btn-group">
-                        <img src="../assets/images/profile-photo.jpg" alt="">
-                        <button class="whiteBtn icon-btn" id="profile-pic-update-button"><i class="bi bi-pencil-fill"></i></button>
-                        <input type="file" name="" id="profile-pic-update-input" hidden>
-                    </div>
-                    <h2>Nweke Earnest</h2>
-                    <p>Staff</p>
-                </section> 
+                <section class="large-card">
 
-                <section class="small-card title-icon-form">
-                    <h3>Profile info</h3>
-                    <button class="redBtn icon-btn update" id="profile-info-btn"><i class="bi bi-pencil-fill"></i></button>
-                    <form action="" class="data-info-form">
-                        <fieldset disabled="disabled" id="profile-info-fieldset" class="grid-form-area">
+                    <h3>Create New Customer Account</h3>
+
+                    <form action="" class="step-form-container">
+                      
+                        <div class="slider"></div>
+
+                        <fieldset class="grid-form-area step-form-item">
+                            
                             <div class="input-group">
-                                <label for="">Full Name</label>
-                                <input type="text" data-oldinfo="Nweke Earnest" name="" id="">
+                                <label for="">Select Account Number</label>
+                            <select name="" id="">
+                                <option value=""></option>
+                            </select>
                             </div>
+
                             <div class="input-group">
-                                <label for="">Username</label>
-                                <input type="text" data-oldinfo="earnest10" name="" id="">
+                                <label for="">Account Name</label>
+                                <input type="text">
                             </div>
+
                             <div class="input-group">
                                 <label for="">Email</label>
-                                <input type="email" data-oldinfo="earnest10@mal.com" name="" id="">
+                                <input type="email">
                             </div>
-                            <div class="input-group">
-                                <label for="">Phone Number</label>
-                                <input type="tel" data-oldinfo="08023232342" name="" id="">
-                            </div>
-                            <div class="input-group">
-                                <label for="">Position</label>
-                                <input type="text" data-oldinfo="Developer" name="" id="">
-                            </div>
-                            <div class="input-group">
-                                <label for="">Date Employed</label>
-                                <input type="date" data-oldinfo="12-12-12" name="" id="">
-                            </div>
-                            <button type="submit" class="redBtn" hidden>Submit</button>
-                        </fieldset>
-                    </form>
-                </section>
-                <section class="small-card title-icon-form">
-                    <h3>security form</h3>
-                    <button class="redBtn icon-btn update" id="security-form-btn"><i class="bi bi-pencil-fill"></i></button>
-                    <form action="" class="data-info-form">
-                        <fieldset disabled="disabled" id="security-form-fieldset" class="grid-form-area">
-                            <div class="input-group">
-                                <label for="">Enter Password</label>
-                                <input type="password"  name="" id="" placeholder="*******">
-                            </div>
-                            <div class="input-group">
-                                <label for="">Confirm Password</label>
-                                <input type="password"  name="" id="" placeholder="*******">
-                            </div>
-                            <button type="submit" class="redBtn" hidden>Submit</button>
-                        </fieldset>
-                       
-                    </form>
-                </section>
 
+                            <div class="input-group">
+                                <label for="">Phone</label>
+                                <input type="tel">
+                            </div>
+
+                            <div class="input-group grid-two">
+                                <label for="">Male</label>
+                                <input type="radio" name="male" id="">
+                                <label for="">Female</label>
+                                <input type="radio" name="female" id="">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Date of Birth</label>
+                                <input type="date">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Marital Status</label>
+                                <select name="" id="">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Residential Address</label>
+                            <textarea name="" id=""></textarea>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Religion</label>
+                                <select name="" id="">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div class="grid-two end">
+                                <button class="nextBtn redBtn self-end">Next</button>
+                            </div>
+                       </fieldset>
+
+                        <fieldset class="grid-form-area step-form-item">
+                            
+                            <div class="input-group">
+                                <label for="">Means of Id</label>
+                                <select name="" id="">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">ID Number</label>
+                                <input type="text">
+                            </div>
+                
+                            <div class="input-group">
+                                <label for="">Local Government Area</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Resident State</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">State of Origin</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Employment Status</label>
+                                <select name="" id="">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Nature of Business</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Office Address</label>
+                                <textarea name="" id="" ></textarea>
+                            </div>
+
+                            <div class="grid-two end">
+                                <button class="prevBtn redBtn">Prev</button>
+                                <button class="nextBtn redBtn">Next</button>
+                            </div>
+                        </fieldset>
+                        
+                        <fieldset class="grid-form-area step-form-item">
+                            
+                            <div class="input-group">
+                                <label for="">Account Status</label>
+                                <select name="" id="">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Account Domiciliation</label>
+                                <input type="text">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="">Next of Kin Name</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Next of Kin Mobile</label>
+                                <input type="tel">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Next of Kin Address</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="input-group">
+                                <label for=""></label>
+                                <input type="file" id="" hidden>
+                                <button id="">Upload Passport</button>
+                            </div>
+
+                            <div class="input-group">
+                                <label for=""></label>
+                                <input type="file" id="" hidden>
+                                <button id="">Upload Signature</button>
+                            </div>
+
+                            <div class="grid-two end">
+                                <button class="prevBtn redBtn">Prev</button>
+                                <button type="submit" class="redBtn">Register</button>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                </section>
             </div>
-
         </section>
 
-<link rel="stylesheet" href="../styles/profile.css">
+
 <!-- The sections Below can be detached and used as footer.php -->
     </main>
     <script src="../scripts/jquery.js"></script>

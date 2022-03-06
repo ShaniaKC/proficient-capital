@@ -77,7 +77,7 @@
 
 /* large card styles start */
 
-.large-card {
+.main-content .large-card {
   min-height: 45vh;
 }
 .large-card-links-wrapper {

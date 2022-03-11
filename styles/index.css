@@ -113,5 +113,9 @@
     grid-template-columns: repeat(12, auto);
   }
 }
-
+.small-card,
+.large-card {
+  max-width: 95vw;
+  overflow: auto;
+}
 /* Large card styles end */

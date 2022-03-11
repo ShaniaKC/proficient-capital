@@ -139,6 +139,7 @@ h6 {
   width: 100%;
   display: none;
   grid-template-rows: 60px 70vh 60px;
+  grid-template-columns: 0.75fr;
   padding-top: 1rem;
   row-gap: 2rem;
   place-content: center;

@@ -12,11 +12,13 @@ const dropdownFunc = (a,b) => {
         let x = $(b).parent().offset().left + $(b).width();
 
         $(b).css({
-            'left': window.innerWidth <= x 
+            'left': window.innerWidth <= x +5
             ? `-${x - window.innerWidth + (window.innerWidth >= 800 ? 60 : 30)}px` 
             : '0'
         });
-       $(b).toggle()
+       $(b).toggle();
+       console.log(x, $(b).width(), window.innerWidth)
+
     })
 }
 dropdownFunc("#profile-btn", "#profile-dropdown");

@@ -108,14 +108,17 @@
 #lg-card-notification-content {
   display: block;
 }
+.small-card,
+.large-card {
+  max-width: 95vw;
+}
+.large-card-links-wrapper {
+  overflow: auto;
+}
 @media screen and (min-width: 500px) {
   .large-card-links-wrapper {
     grid-template-columns: repeat(12, auto);
   }
 }
-.small-card,
-.large-card {
-  max-width: 95vw;
-  overflow: auto;
-}
+
 /* Large card styles end */

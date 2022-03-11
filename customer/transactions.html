@@ -20,35 +20,14 @@
                 <i class="bi bi-x-octagon pointer" id="close-menu"></i>
                 <img src="../assets/images/logo.png" alt="Proficient Capital logo" class="logo">
                 <nav>
-                    <a href="../index.html" class="icon-link-group "><i class="bi bi-layout-text-window-reverse"></i><span>Dashboard</span></a>
+                    <a href="./index.html" class="icon-link-group active"><i class="bi bi-layout-text-window-reverse"></i><span>Dashboard</span></a>
                     <a href="./profile.html" class="icon-link-group"><i class="bi bi-file-earmark-person"></i><span>Profile</span></a>
-                    <a href="#" class="icon-link-group active"><i class="bi bi-search"></i><span>Search</span></a>
-                    <a href="./manage_users.html" class="icon-link-group"><i class="bi bi-person-workspace"></i></i><span>Manage Users</span></a>
-                    <a href="./customers.html" class="icon-link-group"><i class="bi bi-people"></i><span>Customers</span></a>
-                   
-                    <div class="icon-link-drop-wrapper">
-                        <div id="manage-account-btn"  class="icon-link-group">
-                            <i class="bi bi-person-badge"></i><span>Manage Accounts</span>
-                        </div>
-                        <div class="dropdown large-card" id="manage-account-dropdown">
-                            <ul>
-                                <a href="./new_accounts.html">
-                                    <li><i class="bi bi-person-badge"></i><span>New Accounts</span></li>
-                                </a>
-                                <a href="./all_accounts.html">
-                                    <li><i class="bi bi-person-badge"></i><span>All Accounts</span></li>
-                                </a>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <a href="./loans.html" class="icon-link-group"><i class="bi bi-cash-stack"></i><span>Manage Loans</span></a>
-                    <a href="./investments.html" class="icon-link-group"><i class="bi bi-piggy-bank"></i><span>Manage Investments</span></a>
+                    <a href="./notifications.html" class="icon-link-group"><i class="bi bi-bell"></i><span>Notifications</span></a>
+                    <a href="./transactions.html" class="icon-link-group"><i class="bi bi-cash-stack"></i><span>Transactions</span></a>
                 </nav>
                 <div id="signout"><span>Sign Out</span><button class="redBtn"><i class="bi bi-box-arrow-right"></i></button></div>
             </div>
         </section>
-
         <!-- Sidebar ends -->
 
         <section class="top-navigation-wrapper">
@@ -132,33 +111,22 @@
             <div class="main-content" >
                 <h1 class="text-center">Transaction List</h1>
                 <section class="large-card full-page">
-
-                    <h3>Search for customer transactions with the account number</h3>
-
-                    <!-- Searchbar starts -->
-                    <div class="searchbar">
-                        <form action="">
-                            <button type="submit"><i class="bi bi-search"></i></button>
-                            <input type="search" name="" id="" placeholder="Enter customer account number">
-                        </form>
-                    </div>
-                    <!-- Searchbar ends -->
-
                     <!-- Results -->
 
                     <section class="customer-info-wrapper">
                         <p class="customer-info"><span>Customer Name: </span>John Martins Gbemileke</p>
                         <p class="customer-info"><span>Account Number: </span>PRO6899296</p>
-                        <p class="customer-info"><span>Registered On:</span> 23 Mon Dec 2019</p>
+                      
                     </section>
 
                     <section class="activity-details-wrapper grid-two responsive">
-                        <div class="loans">
-                            <h4 class="pill">Loans: <span>1</span></h4>
+                        <div >
+                            <h4 class="pill">Investment 1</h4>
                             <div class="activity-details">
                                 <p class="info-square"><span>Amount: </span>&#8358;50000</p>
                                 <p class="info-square"><span>Interest: </span>10%</p>
                                 <p class="info-square"><span>Duration: </span>1 month(s)</p>
+                                <p class="info-square"><span>Total Interest: </span>&#8358;0</p>
                                 <p class="info-square"><span>Total Accrued: </span>&#8358;0</p>
                                 <p class="info-square"><span>Amount Payout: </span>&#8358;0</p>
                                 <p class="info-square"><span>Status: </span>Liquidated</p>
@@ -166,64 +134,59 @@
                                 <p class="info-square"><span>End Date: </span>2019-09-17</p>
                             </div>
                         </div>
-                        <div class="investments">
-                            <h4 class="pill">Investments: <span>0</span></h4>
+
+                        <div >
+                            <h4 class="pill">Investment 2</h4>
                             <div class="activity-details">
-                                <p>John Martins Gbemileke has not made any investment in this system</p>
+                                <p class="info-square"><span>Amount: </span>&#8358;50000</p>
+                                <p class="info-square"><span>Interest: </span>10%</p>
+                                <p class="info-square"><span>Duration: </span>1 month(s)</p>
+                                <p class="info-square"><span>Total Interest: </span>&#8358;0</p>
+                                <p class="info-square"><span>Total Accrued: </span>&#8358;0</p>
+                                <p class="info-square"><span>Amount Payout: </span>&#8358;0</p>
+                                <p class="info-square"><span>Status: </span>Liquidated</p>
+                                <p class="info-square"><span>Start Date: </span>2019-08-16</p>
+                                <p class="info-square"><span>End Date: </span>2019-09-17</p>
                             </div>
                         </div>
+
+                        <div >
+                            <h4 class="pill">Investment 3</h4>
+                            <div class="activity-details">
+                                <p class="info-square"><span>Amount: </span>&#8358;50000</p>
+                                <p class="info-square"><span>Interest: </span>10%</p>
+                                <p class="info-square"><span>Duration: </span>1 month(s)</p>
+                                <p class="info-square"><span>Total Interest: </span>&#8358;0</p>
+                                <p class="info-square"><span>Total Accrued: </span>&#8358;0</p>
+                                <p class="info-square"><span>Amount Payout: </span>&#8358;0</p>
+                                <p class="info-square"><span>Status: </span>Liquidated</p>
+                                <p class="info-square"><span>Start Date: </span>2019-08-16</p>
+                                <p class="info-square"><span>End Date: </span>2019-09-17</p>
+                            </div>
+                        </div>
+
+                        <div >
+                            <h4 class="pill">Investment 4</h4>
+                            <div class="activity-details">
+                                <p class="info-square"><span>Amount: </span>&#8358;50000</p>
+                                <p class="info-square"><span>Interest: </span>10%</p>
+                                <p class="info-square"><span>Duration: </span>1 month(s)</p>
+                                <p class="info-square"><span>Total Interest: </span>&#8358;0</p>
+                                <p class="info-square"><span>Total Accrued: </span>&#8358;0</p>
+                                <p class="info-square"><span>Amount Payout: </span>&#8358;0</p>
+                                <p class="info-square"><span>Status: </span>Liquidated</p>
+                                <p class="info-square"><span>Start Date: </span>2019-08-16</p>
+                                <p class="info-square"><span>End Date: </span>2019-09-17</p>
+                            </div>
+                        </div>
+                      
                     </section>
 
                 </section>
             </div>
         </section>
 
-                <style>
-                .customer-info-wrapper,
-                .activity-details,
-                .activity-details-wrapper,
-                .main-content .searchbar {
-                    margin-top: 1.5rem;
-                }
-                .activity-details-wrapper {
-                    gap: 2rem 1rem;
-                }
-                .customer-info-wrapper {
-                    display: flex;
-                    width: 100%;
-                    max-width: 900px;
-                    justify-content: space-between;
-                    margin:inherit auto;
-                    flex-wrap: wrap;
-                    flex-direction: column;
-                }
-                .customer-info {
-                    font-size: 1.175rem;
-                    margin: 1rem 0;
-                }
-                .customer-info span,
-                .activity-details span {
-                    font-weight: 700;
-                    display: block;
-                }
-                .activity-details {
-                    display: grid;
-                    grid-template-columns: auto auto;
-                    gap: .75rem .5rem;
-                }
-               
-                @media screen and (min-width: 768px) {
-                    .customer-info-wrapper {
-                        flex-direction: row;
-                    }
-                }
- 
-                @media screen and (min-width: 320px) {
-                    .activity-details {
-                    grid-template-columns: auto auto auto;
-                }
-                }
-                </style>
+             
 <!-- The sections Below can be detached and used as footer.php -->
     </main>
     <script src="../scripts/jquery.js"></script>

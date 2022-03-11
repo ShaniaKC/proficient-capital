@@ -20,9 +20,9 @@
                 <i class="bi bi-x-octagon pointer" id="close-menu"></i>
                 <img src="../assets/images/logo.png" alt="Proficient Capital logo" class="logo">
                 <nav>
-                    <a href="../index.html" class="icon-link-group "><i class="bi bi-layout-text-window-reverse"></i><span>Dashboard</span></a>
+                    <a href="./index.html" class="icon-link-group "><i class="bi bi-layout-text-window-reverse"></i><span>Dashboard</span></a>
                     <a href="./profile.html" class="icon-link-group"><i class="bi bi-file-earmark-person"></i><span>Profile</span></a>
-                    <a href="./search.html" class="icon-link-group"><i class="bi bi-search"></i><span>Search</span></a>
+                    <a href="#" class="icon-link-group active"><i class="bi bi-search"></i><span>Search</span></a>
                     <a href="./manage_users.html" class="icon-link-group"><i class="bi bi-person-workspace"></i></i><span>Manage Users</span></a>
                     <a href="./customers.html" class="icon-link-group"><i class="bi bi-people"></i><span>Customers</span></a>
                    
@@ -35,13 +35,13 @@
                                 <a href="./new_accounts.html">
                                     <li><i class="bi bi-person-badge"></i><span>New Accounts</span></li>
                                 </a>
-                                <a href="#">
+                                <a href="./all_accounts.html">
                                     <li><i class="bi bi-person-badge"></i><span>All Accounts</span></li>
                                 </a>
                             </ul>
                         </div>
                     </div>
-                   
+
                     <a href="./loans.html" class="icon-link-group"><i class="bi bi-cash-stack"></i><span>Manage Loans</span></a>
                     <a href="./investments.html" class="icon-link-group"><i class="bi bi-piggy-bank"></i><span>Manage Investments</span></a>
                 </nav>
@@ -128,41 +128,61 @@
 
 
         <section class="main-content-wrapper">
-            <div class="main-content large-card full-page">
-                <h3>All Accounts</h3>
-                <!-- Data Table Start -->
-                <div class="datatable-wrapper">
-                    <div id="toolbar">
-                        <select >
-                            <option value="">Export Basic</option>
-                            <option value="all">Export All</option>
-                            <option value="selected">Export Selected</option>
-                        </select>
+
+            <div class="main-content" >
+                <h1 class="text-center">Transaction List</h1>
+                <section class="large-card full-page">
+
+                    <h3>Search for customer transactions with the account number</h3>
+
+                    <!-- Searchbar starts -->
+                    <div class="searchbar">
+                        <form action="">
+                            <button type="submit"><i class="bi bi-search"></i></button>
+                            <input type="search" name="" id="" placeholder="Enter customer account number">
+                        </form>
                     </div>
-                    <table class="datatable" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
-                        <thead>
-                            <tr>
-                                <th data-field="state" data-checkbox="true"></th>
-                                <th data-field="id">S/N</th>
-                                <th data-field="photo">Photo</th>
-                                <th data-field="accountName">Account Name</th>
-                                <th data-field="accountNo">Account Num.</th>
-                                <th data-field="email">Email</th>
-                                <th data-field="phone">Phone</th>
-                                <th data-field="gender">Gender</th>
-                                <th data-field="registerBy">Register By</th>
-                                <th data-field="registerOn">Registered on</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                          
-                        </tbody>
-                    </table>
-                </div>
+                    <!-- Searchbar ends -->
+
+                    <!-- Results -->
+
+                    <section class="customer-info-wrapper">
+                        <p class="customer-info"><span>Customer Name: </span>John Martins Gbemileke</p>
+                        <p class="customer-info"><span>Account Number: </span>PRO6899296</p>
+                        <p class="customer-info"><span>Registered On:</span> 23 Mon Dec 2019</p>
+                    </section>
+
+                    <section class="activity-details-wrapper grid-two responsive">
+                        <div class="loans">
+                            <h4 class="pill">Loans: <span>1</span></h4>
+                            <div class="activity-details">
+                                <p class="info-square"><span>Amount: </span>&#8358;50000</p>
+                                <p class="info-square"><span>Interest: </span>10%</p>
+                                <p class="info-square"><span>Duration: </span>1 month(s)</p>
+                                <p class="info-square"><span>Total Accrued: </span>&#8358;0</p>
+                                <p class="info-square"><span>Amount Payout: </span>&#8358;0</p>
+                                <p class="info-square"><span>Status: </span>Liquidated</p>
+                                <p class="info-square"><span>Start Date: </span>2019-08-16</p>
+                                <p class="info-square"><span>End Date: </span>2019-09-17</p>
+                            </div>
+                        </div>
+                        <div class="investments">
+                            <h4 class="pill">Investments: <span>0</span></h4>
+                            <div class="activity-details">
+                                <p>John Martins Gbemileke has not made any investment in this system</p>
+                            </div>
+                        </div>
+                    </section>
+
+                </section>
             </div>
         </section>
 
-
+                <style>
+               .main-content .searchbar {
+                    margin-top: 1.5rem;
+                }
+                </style>
 <!-- The sections Below can be detached and used as footer.php -->
     </main>
     <script src="../scripts/jquery.js"></script>

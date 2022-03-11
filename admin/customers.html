@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../styles/dashboard.css">
+</head>
+
+<body>
+
+    <main class="dashboard">
+      
+        <!-- Sidebar starts -->
+
+        <section class="sidebar-wrapper">
+            <div class="sidebar" id="sidebar">
+                <i class="bi bi-x-octagon pointer" id="close-menu"></i>
+                <img src="../assets/images/logo.png" alt="Proficient Capital logo" class="logo">
+                <nav>
+                    <a href="./index.html" class="icon-link-group "><i class="bi bi-layout-text-window-reverse"></i><span>Dashboard</span></a>
+                    <a href="./profile.html" class="icon-link-group"><i class="bi bi-file-earmark-person"></i><span>Profile</span></a>
+                    <a href="./search.html" class="icon-link-group"><i class="bi bi-search"></i><span>Search</span></a>
+                    <a href="./manage_users.html" class="icon-link-group"><i class="bi bi-person-workspace"></i></i><span>Manage Users</span></a>
+                    <a href="#" class="icon-link-group active"><i class="bi bi-people"></i><span>Customers</span></a>
+                   
+                    <div class="icon-link-drop-wrapper">
+                        <div id="manage-account-btn"  class="icon-link-group">
+                            <i class="bi bi-person-badge"></i><span>Manage Accounts</span>
+                        </div>
+                        <div class="dropdown large-card" id="manage-account-dropdown">
+                            <ul>
+                                <a href="./new_accounts.html">
+                                    <li><i class="bi bi-person-badge"></i><span>New Accounts</span></li>
+                                </a>
+                                <a href="./all_accounts.html">
+                                    <li><i class="bi bi-person-badge"></i><span>All Accounts</span></li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <a href="./loans.html" class="icon-link-group"><i class="bi bi-cash-stack"></i><span>Manage Loans</span></a>
+                    <a href="./investments.html" class="icon-link-group"><i class="bi bi-piggy-bank"></i><span>Manage Investments</span></a>
+                </nav>
+                <div id="signout"><span>Sign Out</span><button class="redBtn"><i class="bi bi-box-arrow-right"></i></button></div>
+            </div>
+        </section>
+
+        <!-- Sidebar ends -->
+
+        <section class="top-navigation-wrapper">
+            <div class="top-navigation">
+
+                 <!-- Navigation Starts-->
+                <div class="top-navigation-menu">
+                    <i class="bi bi-grid-fill pointer" id="open-menu"></i>
+                    <i class="bi bi-caret-down-square pointer" id="toggle-top-nav"></i>
+                </div>
+                  <!-- Navigation Ends-->
+
+                  <!-- Searchbar Starts-->
+
+                <div class="searchbar">
+                    <form action="">
+                        <button type="submit"><i class="bi bi-search"></i></button>
+                        <input type="search" name="" id="">
+                    </form>
+                </div>
+                <!-- Searchbar Ends-->
+               
+                <div class="profile-nav">
+                    <!-- Notification starts Here -->
+                        <div class="notification-wrapper">
+                            <i class="bi bi-bell" id="notification-btn"></i>
+                            <div class="dropdown" id="notification-dropdown">
+                                <p class="dropdown-heading">Notifications</p>
+                               <ul>
+                                <li>A new Client just registered!</li>
+                                <li>Damilola messaged you</li>
+                                <li>A new Client just registered!</li>
+                                <li>Yourinvestment has matured</li>
+                                <li>Your loan is overdue</li>
+                                <li>A new Client just registered!</li>
+                               </ul>
+                            </div>
+                        </div>
+                    <!-- Notification Ends Here -->
+
+                    <!-- Message dropdown Starts Here -->
+                        <div class="message-dropdown-wrapper">
+                            <i class="bi bi-envelope" id="message-btn"></i>
+                            <div class="dropdown" id="message-dropdown">
+                                <p class="dropdown-heading">Message Inbox</p>
+                                <ul>
+                                    <li>A new Client just registered!</li>
+                                    <li>Damilola messaged you</li>
+                                    <li>A new Client just registered!</li>
+                                    <li>Yourinvestment has matured</li>
+                                    <li>Your loan is overdue</li>
+                                    <li>A new Client just registered!</li>
+                                   </ul>
+                            </div>
+                        </div>
+                    <!-- Message dropdown Ends Here -->
+                    
+                    <!-- Profile Dropdown Starts Here -->
+                 <div class="profile-dropdown-wrapper">
+                    <button id="profile-btn" class="whiteBtn shadow">Nweke Earnest</button>
+                    <div id="profile-dropdown" class="dropdown">
+                        <p class="dropdown-heading">Profile</p> 
+                        <ul>
+                            <li>Mr Nweke Earnest</li>
+                            <li>Staff</li>
+                            
+                           </ul>
+                    </div>
+                 </div>
+
+                 <!-- Profile Dropdown Ends -->
+
+                </div>
+            </div>
+        </section>
+        <!-- The sections above can be detached and used as Header.php -->
+
+
+        <section class="main-content-wrapper">
+            <h1 class="text-center">Customers</h1>
+            <div class="main-content large-card full-page">
+                <h3>All Customers</h3>
+                <!-- Data Table Start -->
+                <div class="datatable-wrapper">
+                    <div id="toolbar">
+                        <select class="form-control">
+                            <option value="">Export Basic</option>
+                            <option value="all">Export All</option>
+                            <option value="selected">Export Selected</option>
+                        </select>
+                    </div>
+                    <table class="datatable" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                        <thead>
+                            <tr>
+                                <!-- <th data-field="state" data-checkbox="true"></th> -->
+                                <th data-field="id">S/N</th>
+                                <th data-field="name">Sender Name</th>
+                                <th data-field="email">Email</th>
+                                <th data-field="date_added">Date added</th>
+                                <th data-field="status">Status </th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                        
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Data Table End -->
+                
+            </div>
+        </section>
+
+
+<!-- The sections Below can be detached and used as footer.php -->
+    </main>
+    <script src="../scripts/jquery.js"></script>
+    <script src="../scripts/dashboard.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+</body>
+
+</html>

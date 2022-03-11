@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="../styles/dashboard.css">
 </head>
 
 <body>
-
+    <div class="backdrop"></div>
     <main class="dashboard">
       
         <!-- Sidebar starts -->
@@ -20,12 +21,12 @@
                 <i class="bi bi-x-octagon pointer" id="close-menu"></i>
                 <img src="../assets/images/logo.png" alt="Proficient Capital logo" class="logo">
                 <nav>
-                    <a href="../index.html" class="icon-link-group "><i class="bi bi-layout-text-window-reverse"></i><span>Dashboard</span></a>
-                    <a href="#" class="icon-link-group active"><i class="bi bi-file-earmark-person"></i><span>Profile</span></a>
+                    <a href="./index.html" class="icon-link-group "><i class="bi bi-layout-text-window-reverse"></i><span>Dashboard</span></a>
+                    <a href="./profile.html" class="icon-link-group"><i class="bi bi-file-earmark-person"></i><span>Profile</span></a>
                     <a href="./search.html" class="icon-link-group"><i class="bi bi-search"></i><span>Search</span></a>
                     <a href="./manage_users.html" class="icon-link-group"><i class="bi bi-person-workspace"></i></i><span>Manage Users</span></a>
                     <a href="./customers.html" class="icon-link-group"><i class="bi bi-people"></i><span>Customers</span></a>
-                    
+                   
                     <div class="icon-link-drop-wrapper">
                         <div id="manage-account-btn"  class="icon-link-group">
                             <i class="bi bi-person-badge"></i><span>Manage Accounts</span>
@@ -41,9 +42,9 @@
                             </ul>
                         </div>
                     </div>
-                    
+
                     <a href="./loans.html" class="icon-link-group"><i class="bi bi-cash-stack"></i><span>Manage Loans</span></a>
-                    <a href="./investments.html" class="icon-link-group"><i class="bi bi-piggy-bank"></i><span>Manage Investments</span></a>
+                    <a href="#" class="icon-link-group active"><i class="bi bi-piggy-bank"></i><span>Manage Investments</span></a>
                 </nav>
                 <div id="signout"><span>Sign Out</span><button class="redBtn"><i class="bi bi-box-arrow-right"></i></button></div>
             </div>
@@ -128,81 +129,131 @@
 
 
         <section class="main-content-wrapper">
-
-            <div class="main-content large-card">
-
-                <section class="profile-intro">
-                    <div class="profile-image-btn-group">
-                        <img src="../assets/images/profile-photo.jpg" alt="">
-                        <button class="whiteBtn icon-btn" id="profile-pic-update-button"><i class="bi bi-pencil-fill"></i></button>
-                        <input type="file" name="" id="profile-pic-update-input" hidden>
+            <div class="main-content">
+                <h1 class="text-center">Investments</h1>
+                <section class="large-card grid-two with-header full-page">
+                    <h3>All Investors Table</h3>
+                    <button class="redBtn self-end" id="openInvestorForm">Add New Investor</button>
+                  
+                    <!-- Datatable starts here -->
+                    <!-- <div class="datatable-dashv1-list custom-datatable-overright"> -->
+                        <div class="datatable-wrapper">
+                        <div id="toolbar">
+                            <select >
+                                <option value="">Export Basic</option>
+                                <option value="all">Export All</option>
+                                <option value="selected">Export Selected</option>
+                            </select>
+                        </div>
+                        <table class="datatable" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                            <thead>
+                                <tr>
+                                    <th data-field="state" data-checkbox="true"></th>
+                                    <th data-field="id">S/N</th>
+                                    <th data-field="Account-Name">Account Name</th>
+                                    <th data-field="Account-Number">Account Number</th>
+                                    <th data-field="Investment-Amount">Investment Amount</th>
+                                    <th data-field="Investment-Tenor">Tenor</th>
+                                    <th data-field="Interest-rate">Interest Rate</th>
+                                    <th data-field="Status">Status</th>
+                                    <th data-field="Start-Date">Start Date</th>
+                                    <th data-field="End-Date">End Date</th>
+                                    <th data-field="action"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            
+                            </tbody>
+                        </table>
                     </div>
-                    <h2>Nweke Earnest</h2>
-                    <p>Staff</p>
-                </section> 
-
-                <section class="small-card title-icon-form">
-                    <h3>Profile info</h3>
-                    <button class="redBtn icon-btn update" id="profile-info-btn"><i class="bi bi-pencil-fill"></i></button>
-                    <form action="" class="data-info-form">
-                        <fieldset disabled="disabled" id="profile-info-fieldset" class="grid-form-area">
-                            <div class="input-group">
-                                <label for="">Full Name</label>
-                                <input type="text" data-oldinfo="Nweke Earnest" name="" id="">
-                            </div>
-                            <div class="input-group">
-                                <label for="">Username</label>
-                                <input type="text" data-oldinfo="earnest10" name="" id="">
-                            </div>
-                            <div class="input-group">
-                                <label for="">Email</label>
-                                <input type="email" data-oldinfo="earnest10@mal.com" name="" id="">
-                            </div>
-                            <div class="input-group">
-                                <label for="">Phone Number</label>
-                                <input type="tel" data-oldinfo="08023232342" name="" id="">
-                            </div>
-                            <div class="input-group">
-                                <label for="">Position</label>
-                                <input type="text" data-oldinfo="Developer" name="" id="">
-                            </div>
-                            <div class="input-group">
-                                <label for="">Date Employed</label>
-                                <input type="date" data-oldinfo="12-12-12" name="" id="">
-                            </div>
-                            <button type="submit" class="redBtn" hidden>Submit</button>
-                        </fieldset>
-                    </form>
+                    <!-- Datatable ends here -->                    
                 </section>
-                <section class="small-card title-icon-form">
-                    <h3>security form</h3>
-                    <button class="redBtn icon-btn update" id="security-form-btn"><i class="bi bi-pencil-fill"></i></button>
-                    <form action="" class="data-info-form">
-                        <fieldset disabled="disabled" id="security-form-fieldset" class="grid-form-area">
-                            <div class="input-group">
-                                <label for="">Enter Password</label>
-                                <input type="password"  name="" id="" placeholder="*******">
-                            </div>
-                            <div class="input-group">
-                                <label for="">Confirm Password</label>
-                                <input type="password"  name="" id="" placeholder="*******">
-                            </div>
-                            <button type="submit" class="redBtn" hidden>Submit</button>
-                        </fieldset>
-                       
-                    </form>
-                </section>
-
             </div>
-
         </section>
 
-<link rel="stylesheet" href="../styles/profile.css">
+        <!-- All popups should be placed directly in dashboard main tag to enable vertical and horizontal centering -->
+          <!-- Add Investor Form -->
+          <section class="large-card popup" id="addInvestorForm">
+                    <div class="title-icon-form">
+                        <h3><small>Investor's details - Proficient Capital Limited</small></h3>
+                        <button class="icon-btn redBtn" id="closeInvestorForm">
+                            <i class="bi bi-x-octagon pointer"></i>
+                        </button>
+                        <form action="" class="grid-form-area">
+
+                            <div class="input-group">
+                                <label for="">Select Account Number:</label>
+                                <select name="" id="">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Investment Amount:</label>
+                                <input type="number">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Date Started:</label>
+                                <input type="date">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Date Ended:</label>
+                                <input type="date">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Investment Tenor:</label>
+                                <input type="number">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Interest rate:</label>
+                                <input type="number">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Select Status:</label>
+                               <select name="" id="">
+                                   <option value=""></option>
+                               </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Rollover:</label>
+                                <input type="text">
+                            </div>
+                            <div class="input-group">
+                                <label for="">Accrued Investment:</label>
+                                <input type="text" disabled="disabled">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="">Amount to payout:</label>
+                                <input type="text" disabled>
+                            </div>
+
+                            <div class="input-group">
+                                <button id="investor-form-next-of-kin-button">Next of Kin Signature</button>
+                                <input type="file" name="" id="investor-form-next-of-kin-input" hidden>
+                            </div>
+                            <button type="submit" class="redBtn self-end">Add Investor</button>
+                        </form>
+                    </div>
+        </section>
+
+       <style>
+          @media screen and (max-width: 390px) {
+            .title-icon-form {
+               grid-template-rows: 5rem auto;
+           }
+          }
+       </style>
 <!-- The sections Below can be detached and used as footer.php -->
     </main>
     <script src="../scripts/jquery.js"></script>
     <script src="../scripts/dashboard.js"></script>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 </body>
 

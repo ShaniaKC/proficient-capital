@@ -20,10 +20,10 @@
                 <i class="bi bi-x-octagon pointer" id="close-menu"></i>
                 <img src="../assets/images/logo.png" alt="Proficient Capital logo" class="logo">
                 <nav>
-                    <a href="../index.html" class="icon-link-group "><i class="bi bi-layout-text-window-reverse"></i><span>Dashboard</span></a>
+                    <a href="./index.html" class="icon-link-group "><i class="bi bi-layout-text-window-reverse"></i><span>Dashboard</span></a>
                     <a href="./profile.html" class="icon-link-group"><i class="bi bi-file-earmark-person"></i><span>Profile</span></a>
                     <a href="./search.html" class="icon-link-group"><i class="bi bi-search"></i><span>Search</span></a>
-                    <a href="./manage_users.html" class="icon-link-group"><i class="bi bi-person-workspace"></i></i><span>Manage Users</span></a>
+                    <a href="#" class="icon-link-group active"><i class="bi bi-person-workspace"></i></i><span>Manage Users</span></a>
                     <a href="./customers.html" class="icon-link-group"><i class="bi bi-people"></i><span>Customers</span></a>
                    
                     <div class="icon-link-drop-wrapper">
@@ -42,7 +42,7 @@
                         </div>
                     </div>
 
-                    <a href="#" class="icon-link-group active"><i class="bi bi-cash-stack"></i><span>Manage Loans</span></a>
+                    <a href="./loans.html" class="icon-link-group"><i class="bi bi-cash-stack"></i><span>Manage Loans</span></a>
                     <a href="./investments.html" class="icon-link-group"><i class="bi bi-piggy-bank"></i><span>Manage Investments</span></a>
                 </nav>
                 <div id="signout"><span>Sign Out</span><button class="redBtn"><i class="bi bi-box-arrow-right"></i></button></div>
@@ -129,147 +129,192 @@
 
         <section class="main-content-wrapper">
             <div class="main-content">
-                <h1 class="text-center">Manage Loans</h1>
-                <section class="large-card grid-two with-header full-page">
-                    <h3>All Loans Table</h3>
-                    <button class="redBtn self-end" id="openLoanForm">Add New Loan</button>
-                   
-                   <!-- Datatables start -->
-                    <!-- <div class="datatable-dashv1-list custom-datatable-overright"> -->
-                     <div class="datatable-wrapper">
-                        <div id="toolbar">
-                            <select >
-                                <option value="">Export Basic</option>
-                                <option value="all">Export All</option>
-                                <option value="selected">Export Selected</option>
-                            </select>
-                        </div>
-                        <table id="table" class="datatable" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
-                            <thead>
-                                <tr>
-                                    <th data-field="state" data-checkbox="true"></th>
-                                    <th data-field="id">S/N</th>
-                                    <th data-field="Account-Name">Account Name</th>
-                                    <th data-field="Account-Number">Account Number</th>
-                                    <th data-field="Loan-Amount">Loan Amount</th>
-                                    <th data-field="Loan-Tenor">Tenor</th>
-                                    <th data-field="Interest-rate">Interest Rate</th>
-                                    <th data-field="Status">Status</th>
-                                    <th data-field="Start-Date">Start Date</th>
-                                    <th data-field="End-Date">End Date</th>
-                                    <th data-field="action"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                               
-                            </tbody>
-                        </table>
-                    </div>   
-                    <!-- Datatable end -->
-                </section>
-            </div>
-        </section>
 
-        <!-- All popups should be placed directly in dashboard main tag to enable vertical and horizontal centering -->
-          <!-- Add Loan Form -->
-          <section class="large-card popup" id="addLoanForm">
-            <div class="title-icon-form">
-                <h3><small>Add Loan</small></h3>
-                <button class="icon-btn redBtn" id="closeLoanForm">
-                    <i class="bi bi-x-octagon pointer"></i>
-                </button>
-                <form action="" class="grid-form-area">
+              <h1 class="text-center">Administrators</h1> 
 
-                    <div class="input-group">
-                        <label for="">Select Account Number</label>
-                        <select name="" id="">
-                            <option value=""></option>
+              <section class="large-card grid-two with-header full-page">
+                <h3>All Administrators</h3>
+                <button class="redBtn self-end" id="openUserForm">Add New Admin</button>
+
+                   <!-- Datatable starts -->
+                <div class="datatable-wrapper">
+                    <div id="toolbar">
+                        <select >
+                            <option value="">Export Basic</option>
+                            <option value="all">Export All</option>
+                            <option value="selected">Export Selected</option>
                         </select>
                     </div>
+                    <table class="datatable" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                    <thead>
+                        <tr>
+                            <th data-field="state" data-checkbox="true"></th>
+                            <th data-field="id">S/N</th>
+                            <th data-field="fullname">Fullname</th>
+                            <th data-field="username">Username</th>
+                            <th data-field="email">Email</th>
+                            <th data-field="role">Role</th>
+                            <th data-field="action"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Datatables end -->
+              </section>
+            </div>
+        </section>
+        <!-- Main content ends here -->
 
+        <!-- New user form starts here -->
+        <div class="large-card popup" id="addUserForm">
+            <div class="grid-two">
+                <h3>Add New User</h3>
+            <button class="icon-btn redBtn self-end" id="closeUserForm">
+                <i class="bi bi-x-octagon pointer"></i>
+            </button>
+            </div>
+            <!-- Register new User Step 1 -->
+            <section class="step-form-container">
+
+                <div class="slider"></div>
+
+                <form action="" class="grid-form-area step-form-item" >
                     <div class="input-group">
-                        <label for="">Loan Amount</label>
-                        <input type="number">
+                        <label for="">Fullname</label>
+                        <input type="text" name="">
                     </div>
 
                     <div class="input-group">
-                        <label for="">Date Started</label>
-                        <input type="date">
+                        <label for="">Username</label>
+                        <input type="text" name="">
                     </div>
 
                     <div class="input-group">
-                        <label for="">End Date</label>
-                        <input type="date">
+                        <label for="">Email</label>
+                        <input type="email" name="">
                     </div>
 
                     <div class="input-group">
-                        <label for="">Loan Tenor</label>
-                        <input type="number">
+                        <label for="">Mobile Number</label>
+                        <input type="tel" name="">
                     </div>
 
                     <div class="input-group">
-                        <label for="">Current Due</label>
-                        <input type="number">
+                        <label for="">Password</label>
+                        <input type="password" name="">
                     </div>
 
                     <div class="input-group">
-                        <label for="">Select Status</label>
+                        <label for="">Confirm Password</label>
+                        <input type="password" name="">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Date of Birth</label>
+                        <input type="date" name="">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Role</label>
                        <select name="" id="">
-                           <option value=""></option>
+                           <option value="Managing Director">Managing Director</option>
+                           <option value="Head of Operation">Head of Operation</option>
+                           <option value="Relationship Officer">Relationship Officer</option>
                        </select>
                     </div>
-
-                    <div class="input-group">
-                        <label for="">Interest Rate</label>
-                        <input type="number">
+                    <div class="grid-two">
+                        <button class="redBtn nextBtn">Next</button>
                     </div>
-
-                    <div class="input-group">
-                        <label for="">Cheque Number</label>
-                        <input type="text">
-                    </div>
-
-                    <div class="input-group">
-                        <label for="">Guarantor's Name</label>
-                        <input type="text">
-                    </div>
-
-                    <div class="input-group">
-                        <label for="">Guarantor's address</label>
-                        <input type="text">
-                    </div>
-
-                    <div class="input-group">
-                        <label for="">Total Paid</label>
-                        <input type="number">
-                    </div>
-
-                    <div class="input-group">
-                        <label for="">Accrued Interest</label>
-                        <input type="text" disabled>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="">Amount Payable</label>
-                        <input type="text" disabled>
-                    </div>
-
-                    <div class="input-group">
-                       <input type="file" name="" id="loan-form-guarantor-input" hidden>
-                       <button  id="loan-form-guarantor-button">Upload Guarantor's Signature</button>
-                    </div>
-                    <button type="submit" class="redBtn self-end">Add Loan</button>
                 </form>
-            </div>
-</section>
-<!-- Add Loan form ends -->
 
-<!-- The sections Below can be detached and used as footer.php -->
+                <!-- Regster new user step 2 -->
+                <form action="" class="grid-form-area step-form-item" >
+
+                    <div class="input-group">
+                        <label for="">Home Address</label>
+                        <input type="text" name=""></input>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">LGA</label>
+                        <input type="text" name=""></input>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="">State of Origin</label>
+                        <input type="text" name=""></input>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="">State of Residence</label>
+                        <input type="text" name=""></input>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Country</label>
+                        <input type="text" name=""></input>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Refree</label>
+                        <input type="text" name=""></input>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Next of kin<label>
+                        <input type="text" name=""></input>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Qualifications</label>
+                        <input type="text" name=""></input>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Salary</label>
+                        <input type="text" name=""></input>
+                    </div>
+
+                    <div class="input-group">
+                        <label for=""></label>
+                        <input type="date" name="">Employment Date</input>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Level</label>
+                       <select name="" id="">
+                           <option value="level 0">Level 0</option>
+                           <option value="level 1">Level 1</option>
+                           <option value="level 2">Level 2</option>
+                           <option value="level 3">Level 3</option>
+                           <option value="level 4">Level 4</option>
+                       </select>
+                    </div>
+                   <div class="grid-two end">
+                    <button class="redBtn prevBtn">Prev</button>
+                    <button class="redBtn self-end">Submit</button>
+                   </div>
+                </form>
+            </section>
+        </div>
+        <!-- Add new user form ends -->
+
+
+
+<!-- The sections Below can be detached and used as fo
+    oter.php -->
     </main>
     <script src="../scripts/jquery.js"></script>
     <script src="../scripts/dashboard.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    
+
 </body>
 
 </html>

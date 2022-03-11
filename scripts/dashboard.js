@@ -58,6 +58,7 @@ const toggleTabs = (a,b) => {
 toggleTabs('#lg-card-notification-link', '#lg-card-notification-content')
 toggleTabs('#lg-card-account-link', '#lg-card-account-content')
 toggleTabs('#lg-card-loan-link', '#lg-card-loan-content')
+toggleTabs('#lg-card-invest-link', '#lg-card-invest-content')
 
 // Start the profile forms with data gotten from the backend
 for (const elem in $('.data-info-form input')) {

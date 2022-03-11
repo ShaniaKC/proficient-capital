@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../styles/dashboard.css">
+</head>
+
+<body>
+
+    <main class="dashboard">
+      
+        <!-- Sidebar starts -->
+
+        <section class="sidebar-wrapper">
+            <div class="sidebar" id="sidebar">
+                <i class="bi bi-x-octagon pointer" id="close-menu"></i>
+                <img src="../assets/images/logo.png" alt="Proficient Capital logo" class="logo">
+                <nav>
+                    <a href="./index.html" class="icon-link-group active"><i class="bi bi-layout-text-window-reverse"></i><span>Dashboard</span></a>
+                    <a href="./profile.html" class="icon-link-group"><i class="bi bi-file-earmark-person"></i><span>Profile</span></a>
+                    <a href="./notifications.html" class="icon-link-group"><i class="bi bi-bell"></i><span>Notifications</span></a>
+                    <a href="./transactions.html" class="icon-link-group"><i class="bi bi-cash-stack"></i><span>Transactions</span></a>
+                </nav>
+                <div id="signout"><span>Sign Out</span><button class="redBtn"><i class="bi bi-box-arrow-right"></i></button></div>
+            </div>
+        </section>
+        <!-- Sidebar ends -->
+
+        <section class="top-navigation-wrapper">
+            <div class="top-navigation">
+
+                 <!-- Navigation Starts-->
+                <div class="top-navigation-menu">
+                    <i class="bi bi-grid-fill pointer" id="open-menu"></i>
+                    <i class="bi bi-caret-down-square pointer" id="toggle-top-nav"></i>
+                </div>
+                  <!-- Navigation Ends-->
+
+                  <!-- Searchbar Starts-->
+
+                <div class="searchbar">
+                    <form action="">
+                        <button type="submit"><i class="bi bi-search"></i></button>
+                        <input type="search" name="" id="">
+                    </form>
+                </div>
+                <!-- Searchbar Ends-->
+               
+                <div class="profile-nav">
+                    <!-- Notification starts Here -->
+                        <div class="notification-wrapper">
+                            <i class="bi bi-bell" id="notification-btn"></i>
+                            <div class="dropdown" id="notification-dropdown">
+                                <p class="dropdown-heading">Notifications</p>
+                               <ul>
+                                <li>A new Client just registered!</li>
+                                <li>Damilola messaged you</li>
+                                <li>A new Client just registered!</li>
+                                <li>Yourinvestment has matured</li>
+                                <li>Your loan is overdue</li>
+                                <li>A new Client just registered!</li>
+                               </ul>
+                            </div>
+                        </div>
+                    <!-- Notification Ends Here -->
+
+                    <!-- Message dropdown Starts Here -->
+                        <div class="message-dropdown-wrapper">
+                            <i class="bi bi-envelope" id="message-btn"></i>
+                            <div class="dropdown" id="message-dropdown">
+                                <p class="dropdown-heading">Message Inbox</p>
+                                <ul>
+                                    <li>A new Client just registered!</li>
+                                    <li>Damilola messaged you</li>
+                                    <li>A new Client just registered!</li>
+                                    <li>Yourinvestment has matured</li>
+                                    <li>Your loan is overdue</li>
+                                    <li>A new Client just registered!</li>
+                                   </ul>
+                            </div>
+                        </div>
+                    <!-- Message dropdown Ends Here -->
+                    
+                    <!-- Profile Dropdown Starts Here -->
+                 <div class="profile-dropdown-wrapper">
+                    <button id="profile-btn" class="whiteBtn shadow">Nweke Earnest</button>
+                    <div id="profile-dropdown" class="dropdown">
+                        <p class="dropdown-heading">Profile</p> 
+                        <ul>
+                            <li>Mr Nweke Earnest</li>
+                            <li>Staff</li>
+                            
+                           </ul>
+                    </div>
+                 </div>
+
+                 <!-- Profile Dropdown Ends -->
+
+                </div>
+            </div>
+        </section>
+        <!-- The sections above can be detached and used as Header.php -->
+
+
+        <section class="main-content-wrapper">
+
+            <div class="main-content" >
+               
+                <section class="large-card full-page">
+                    <h1 class="text-center">Notifications</h1>
+                    <ul class="large-customer-notification-ul">
+                        <li class="unread">
+                            <b>24 Sep 2021</b>
+                            <p>You have successfully invested 500,000 with an interest rate of 3.5 to be availabe for withdrawal on 2021-11-23. Thanks for trusting Proficient Capital</p>
+                        </li>
+                        <li>
+                             <b>24 Sep 2021</b>
+                            <p>You have successfully invested 500,000 with an interest rate of 3.5 to be availabe for withdrawal on 2021-11-23. Thanks for trusting Proficient Capital</p>
+                        </li>
+                        <li>
+                             <b>24 Sep 2021</b>
+                            <p>You have successfully invested 500,000 with an interest rate of 3.5 to be availabe for withdrawal on 2021-11-23. Thanks for trusting Proficient Capital</p>
+                        </li>
+                        <li>
+                             <b>24 Sep 2021</b>
+                            <p>You have successfully invested 500,000 with an interest rate of 3.5 to be availabe for withdrawal on 2021-11-23. Thanks for trusting Proficient Capital</p>
+                        </li>
+                        <li>
+                             <b>24 Sep 2021</b>
+                            <p>You have successfully invested 500,000 with an interest rate of 3.5 to be availabe for withdrawal on 2021-11-23. Thanks for trusting Proficient Capital</p>
+                        </li>
+                        <li>
+                             <b>24 Sep 2021</b>
+                            <p>You have successfully invested 500,000 with an interest rate of 3.5 to be availabe for withdrawal on 2021-11-23. Thanks for trusting Proficient Capital</p>
+                        </li>
+                        <li>
+                             <b>24 Sep 2021</b>
+                            <p>You have successfully invested 500,000 with an interest rate of 3.5 to be availabe for withdrawal on 2021-11-23. Thanks for trusting Proficient Capital</p>
+                        </li>
+                        <li>
+                             <b>24 Sep 2021</b>
+                            <p>You have successfully invested 500,000 with an interest rate of 3.5 to be availabe for withdrawal on 2021-11-23. Thanks for trusting Proficient Capital</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+
+             
+<!-- The sections Below can be detached and used as footer.php -->
+    </main>
+    <script src="../scripts/jquery.js"></script>
+    <script src="../scripts/dashboard.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+</body>
+
+</html>

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="../styles/dashboard.css">
+    <link rel="stylesheet" href="./styles/dashboard.css">
 </head>
 
 <body>
@@ -18,13 +18,13 @@
         <section class="sidebar-wrapper">
             <div class="sidebar" id="sidebar">
                 <i class="bi bi-x-octagon pointer" id="close-menu"></i>
-                <img src="../assets/images/logo.png" alt="Proficient Capital logo" class="logo">
+                <img src="./assets/images/logo.png" alt="Proficient Capital logo" class="logo">
                 <nav>
-                    <a href="./index.html" class="icon-link-group active"><i class="bi bi-layout-text-window-reverse"></i><span>Dashboard</span></a>
-                    <a href="./profile.html" class="icon-link-group"><i class="bi bi-file-earmark-person"></i><span>Profile</span></a>
-                    <a href="./search.html" class="icon-link-group"><i class="bi bi-search"></i><span>Search</span></a>
-                    <a href="./manage_users.html" class="icon-link-group"><i class="bi bi-person-workspace"></i></i><span>Manage Users</span></a>
-                    <a href="./customers.html" class="icon-link-group"><i class="bi bi-people"></i><span>Customers</span></a>
+                    <a href="#" class="icon-link-group active"><i class="bi bi-layout-text-window-reverse"></i><span>Dashboard</span></a>
+                    <a href="./admin/profile.html" class="icon-link-group"><i class="bi bi-file-earmark-person"></i><span>Profile</span></a>
+                    <a href="./admin/search.html" class="icon-link-group"><i class="bi bi-search"></i><span>Search</span></a>
+                    <a href="./admin/manage_users.html" class="icon-link-group"><i class="bi bi-person-workspace"></i></i><span>Manage Users</span></a>
+                    <a href="./admin/customers.html" class="icon-link-group"><i class="bi bi-people"></i><span>Customers</span></a>
                     
                     <div class="icon-link-drop-wrapper">
                         <div id="manage-account-btn"  class="icon-link-group">
@@ -32,18 +32,19 @@
                         </div>
                         <div class="dropdown large-card" id="manage-account-dropdown">
                             <ul>
-                                <a href="./new_accounts.html">
+                                <a href="./admin/new_accounts.html">
                                     <li><i class="bi bi-person-badge"></i><span>New Accounts</span></li>
                                 </a>
-                                <a href="./all_accounts.html">
+                                <a href="./admin/all_accounts.html">
                                     <li><i class="bi bi-person-badge"></i><span>All Accounts</span></li>
                                 </a>
                             </ul>
                         </div>
                     </div>
 
-                    <a href="./loans.html" class="icon-link-group"><i class="bi bi-cash-stack"></i><span>Manage Loans</span></a>
-                    <a href="./investments.html" class="icon-link-group"><i class="bi bi-piggy-bank"></i><span>Manage Investments</span></a>
+                    <a href="./admin/loans.html" class="icon-link-group"><i class="bi bi-cash-stack"></i><span>Manage Loans</span></a>
+                    <a href="./admin/investments.html" class="icon-link-group"><i class="bi bi-piggy-bank"></i><span>Manage Investments</span></a>
+                    <a href="./customer/index.html" class="icon-link-group active"><i class="bi bi-layout-text-window-reverse"></i><span>Customer Dashboard</span></a>
                 </nav>
                 <div id="signout"><span>Sign Out</span><button class="redBtn"><i class="bi bi-box-arrow-right"></i></button></div>
             </div>
@@ -210,13 +211,13 @@
             </div>
         </section>
 
-        <link rel="stylesheet" href="../styles/index.css">
+        <link rel="stylesheet" href="./styles/index.css">
 <!--  -->
 
 <!-- The sections Below can be detached and used as footer.php -->
     </main>
-    <script src="../scripts/jquery.js"></script>
-    <script src="../scripts/dashboard.js"></script>
+    <script src="./scripts/jquery.js"></script>
+    <script src="./scripts/dashboard.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 </body>

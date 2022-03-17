@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+
+:root {
+  --light: #e4e4e4;
+  --dark: #707070;
+  --primary: #004660;
+  --secondary: #f5de6d;
+  --light-text: #101010;
+  --body-font: "Montserrat", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--body-font);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+a {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5rem 0;
+}
+p {
+  margin-bottom: 0.5rem;
+}
+main {
+  text-align: center;
+}
+.container {
+  margin: auto;
+  min-height: 100vh;
+}
+.container > * {
+  padding: 1rem;
+}
+
+/* navbar */
+header.flex-btw {
+  width: 95vw;
+}
+.logo {
+  max-width: 7rem;
+  max-height: 5rem;
+}
+header .navbar {
+  display: flex;
+}
+#menu-btn,
+#profile-btn {
+  background-color: transparent;
+}
+#menu-btn img,
+#profile-btn img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: black;
+  color: white;
+  width: 15rem;
+  box-sizing: content-box;
+  min-height: 17rem;
+}
+.dropdown > * {
+  display: block;
+  margin: 2rem 2.5rem 1rem;
+}
+/* navbar ends */
+
+/* footer starts  */
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  padding: 1rem;
+  margin: 2rem auto 4rem;
+}
+footer > .suscribe-form {
+  place-self: center;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+footer > .suscribe-form input {
+  min-width: 40vw;
+}
+footer .app-download-icons {
+  /* text-align: left; */
+  place-self: start;
+}
+footer nav {
+  width: 100%;
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem 1rem;
+  margin: auto;
+}
+.nav-list {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  footer nav {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+/* @media screen and (min-width: 1024px) {
+  footer nav {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+} */
+@media screen and (min-width: 1200px) {
+  footer nav {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+/* footer ends */
+
+.signup,
+.account_creation .download-cta,
+.bg-secondary,
+.bg-primary {
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+}
+.bg-primary {
+  background-image: url("../assets/bg_primary.png");
+  color: white;
+}
+.bg-secondary {
+  background-image: url("../assets/bg_secondary.png");
+}
+.bg-primary,
+.bg-secondary {
+  min-height: 30vh;
+}
+
+/* signup pages starts
+ */
+.signup {
+  width: 100vw;
+  padding: 0 2rem;
+}
+.driver_signup {
+  background-image: url("../assets/driverbg.png");
+}
+.customer_signup {
+  background-image: url("../assets/customerbg.png");
+}
+.signup .logo {
+  width: 10em;
+  height: 10em;
+  place-self: center;
+}
+.signup form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.93);
+  backdrop-filter: blur(20px);
+  padding: 2rem;
+  width: 100%;
+  max-width: 40rem;
+  place-self: start center;
+}
+.signup .app-download-icons {
+  place-self: start center;
+}
+.signup input,
+.signup button {
+  border-radius: 1rem;
+}
+.signup button {
+  background-color: var(--dark);
+}
+/* signup pages styles end */
+
+/* Account creation starts */
+.account_creation {
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr;
+  height: 100vh;
+}
+
+.account_creation .download-cta {
+  background-image: url("../assets/Bg@2x.png");
+  place-content: center;
+  place-self: end auto;
+  text-align: center;
+}
+.account_creation .large-icon {
+  background-color: var(--primary);
+  width: fit-content;
+  padding: 2rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+.account_creation .large-icon img {
+  width: 5rem;
+  height: 5rem;
+}
+.account_creation .download-cta .app-download-icons {
+  margin-top: 1rem;
+}
+
+/* Account creation ends */
+.homepage .bg-primary,
+.homepage .bg-secondary,
+.homepage .features,
+.homepage .hero {
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.homepage .app-download-icons {
+  place-content: center;
+}
+
+.homepage .about {
+  padding: 2rem 1.5rem;
+  text-align: left;
+}
+.homepage .content > h2 {
+  text-align: center;
+}
+.homepage .about > img {
+  width: 100%;
+  height: 100%;
+}
+.homepage .about {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.ceo {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  margin-top: 1rem;
+}
+.homepage .content > h2,
+.ceo h3 {
+  margin-top: 0;
+}
+.ceo-img {
+  width: 3rem;
+  height: auto;
+}
+.features,
+.about {
+  max-width: 1280px;
+  margin: auto;
+}
+.features > * {
+  max-width: 25%;
+  /* font-size: 2.5vh; */
+}
+.features > * > img {
+  width: 100%;
+  height: auto;
+}
+/* components start */
+.app-download-icons {
+  width: 20em;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.app-download-icons > img {
+  max-width: 100%;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  padding: 1rem;
+}
+input {
+  background-color: var(--light);
+}
+button {
+  background-color: black;
+  color: white;
+}
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+form > a {
+  place-self: start end;
+}
+
+/* components end */
+
+/* Sections and grids */
+.flex-btw {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+.flex-btw.responsive {
+  flex-wrap: wrap;
+}
+.grid-center {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  /* margin-bottom: 3rem; */
+}
+
+.grid-two {
+  display: grid;
+  gap: 2rem;
+}
+.self-start {
+  place-self: start;
+}
+.self-end {
+  place-self: end;
+}
+.self-center {
+  place-self: center;
+}
+/* sections and grids */
+
+/* media queries all */
+@media screen and (min-width: 768px) {
+  .homepage .about {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .homepage .about .two-third {
+    grid-column: 2 / span end;
+  }
+  /* #menu-dropdown {
+    width: 12rem;
+  } */
+}
+@media screen and (min-width: 1024px) {
+  .grid-two {
+    grid-template-columns: 1fr 1fr;
+  }
+  .signup form {
+    place-self: start end;
+  }
+  .signup .app-download-icons {
+    place-self: end;
+  }
+  .signup form {
+    margin-top: 3rem;
+  }
+  .signup .logo {
+    place-self: start;
+  }
+  .homepage .bg-primary,
+  .homepage .bg-secondary,
+  .homepage .features,
+  .homepage .hero {
+    padding: 2rem 4rem;
+  }
+}

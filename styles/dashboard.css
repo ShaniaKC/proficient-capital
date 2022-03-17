@@ -7,7 +7,9 @@
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
   --shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  --shadow-light: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   --grey: #e8e8e8;
+  --light-grey: #f1f1f1;
   --pink: rgb(243, 160, 160);
   --grey-text: #333;
   --light-grey-text: #444;
@@ -23,6 +25,7 @@
 body {
   font-size: 16px;
   color: var(--light-grey-text);
+  background-color: var(--light-grey);
 }
 a {
   text-decoration: none;
@@ -56,7 +59,7 @@ h6 {
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: auto auto;
   gap: 0.5rem 1rem;
-  background-color: var(--grey);
+  background-color: var(--light-grey);
 }
 
 .sidebar-wrapper {
@@ -134,7 +137,8 @@ h6 {
   position: sticky;
   top: 0;
   left: 0;
-  background-color: white;
+  background-color: var(--grey-text);
+  color: white;
   height: 100vh;
   width: 100%;
   display: none;
@@ -176,7 +180,7 @@ h6 {
 }
 .icon-link-group {
   border-radius: 15px;
-  color: black;
+  color: inherit;
   padding: 0.3rem 1rem;
 }
 .icon-link-group.active,
@@ -392,7 +396,7 @@ button {
   position: relative;
   background-color: white;
   border-radius: 1rem;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-light);
 }
 .small-card {
   padding: 1rem;
@@ -408,7 +412,6 @@ button {
   display: inline-block;
   position: absolute;
   border-radius: 1rem;
-  background-color: red;
 }
 
 .small-card::before {
@@ -416,20 +419,15 @@ button {
   width: 1rem;
   top: 4%;
   left: 0;
+  background: linear-gradient(#333, rgb(255, 0, 0));
 }
 
-.large-card::before {
-  content: " ";
-  display: inline-block;
-  position: absolute;
-  border-radius: 1rem;
-  background-color: red;
-}
 .large-card::before {
   top: 0;
   left: 0;
   height: 1rem;
   width: 100%;
+  background: linear-gradient(to left, #333, rgb(255, 0, 0));
 }
 /* Components Styles End */
 

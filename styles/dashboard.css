@@ -137,8 +137,10 @@ h6 {
   position: sticky;
   top: 0;
   left: 0;
-  background-color: var(--grey-text);
-  color: white;
+  /* background-color: var(--grey-text); */
+  /* color: white; */
+  color: var(--grey-text);
+  background-color: white;
   height: 100vh;
   width: 100%;
   display: none;
@@ -419,7 +421,8 @@ button {
   width: 1rem;
   top: 4%;
   left: 0;
-  background: linear-gradient(#333, rgb(255, 0, 0));
+  /* background: linear-gradient(#333, rgb(255, 0, 0)); */
+  background-color: red;
 }
 
 .large-card::before {
@@ -427,7 +430,8 @@ button {
   left: 0;
   height: 1rem;
   width: 100%;
-  background: linear-gradient(to left, #333, rgb(255, 0, 0));
+  /* background: linear-gradient(to left, #333, rgb(255, 0, 0)); */
+  background-color: red;
 }
 /* Components Styles End */
 
